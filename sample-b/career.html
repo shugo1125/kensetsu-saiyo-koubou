@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報 | 株式会社サンプル工務店 RECRUIT</title>
+  <meta name="description" content="株式会社サンプル工務店の採用情報。大工職人・現場管理・内装仕上げ・設計スタッフを募集中。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Form Styles */
+    .entry-section {
+      padding: 80px 0;
+      background: var(--c-gray-light);
+    }
+    .entry-form {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--c-white);
+      border-radius: 16px;
+      padding: 48px 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+    .form__group {
+      margin-bottom: 24px;
+    }
+    .form__label {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: var(--fw-bold);
+      color: var(--c-navy);
+      margin-bottom: 8px;
+    }
+    .form__required {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.6875rem;
+      font-weight: var(--fw-black);
+      color: var(--c-white);
+      background: var(--c-orange);
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .form__input,
+    .form__select,
+    .form__textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-family: var(--ff-base);
+      color: var(--c-text);
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      background: var(--c-white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form__input:focus,
+    .form__select:focus,
+    .form__textarea:focus {
+      border-color: var(--c-orange);
+      box-shadow: 0 0 0 3px rgba(242, 101, 34, 0.15);
+    }
+    .form__input::placeholder,
+    .form__textarea::placeholder {
+      color: #bbb;
+    }
+    .form__select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+    .form__textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+    .form__submit {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      font-size: 1.125rem;
+      font-weight: var(--fw-black);
+      font-family: var(--ff-base);
+      color: var(--c-white);
+      background: var(--c-navy);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all var(--transition);
+      letter-spacing: 0.1em;
+      margin-top: 8px;
+    }
+    .form__submit:hover {
+      background: var(--c-orange);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(242, 101, 34, 0.4);
+    }
+    @media (max-width: 767px) {
+      .entry-form {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-icon">🔨</span>
+        <span class="header__logo-text">サンプル工務店</span>
+        <span class="header__logo-sub">RECRUIT</span>
+      </a>
+      <nav class="header__nav" id="nav" aria-label="メインナビゲーション">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">TOP</a></li>
+          <li><a href="job.html" class="header__nav-link">しごとを知る</a></li>
+          <li><a href="culture.html" class="header__nav-link">カルチャー</a></li>
+          <li><a href="members.html" class="header__nav-link">メンバー紹介</a></li>
+          <li><a href="career.html" class="header__nav-link is-current">採用情報</a></li>
+          <li><a href="career.html#entry" class="header__nav-link header__nav-link--entry">ENTRY</a></li>
+        </ul>
+      </nav>
+      <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <img src="images/hero-career.jpg" alt="職人たちの仕事風景">
+      </div>
+      <div class="page-hero__content">
+        <h1 class="page-hero__en">CAREER</h1>
+        <p class="page-hero__ja">採用情報</p>
+      </div>
+    </section>
+
+    <!-- Career Message -->
+    <section class="career-section" id="career">
+      <div class="container">
+        <div class="career__message fade-in">
+          <h2 class="career__message-heading">「<em>全部</em>」やりたい人、募集中。</h2>
+          <p class="career__message-text">
+            設計も、施工も、お客様対応も。一つの専門に閉じこもらず、家づくりの全工程に携わりたい人を待っています。経験は問いません。大切なのは、「いいものをつくりたい」という気持ちと、仲間を大切にできる心。サンプル工務店で、あなたの可能性を広げませんか。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--navy"></div>
+
+    <!-- Roadmap -->
+    <section class="job-section">
+      <div class="container">
+        <h2 class="section-title section-title--white fade-in">
+          <span class="section-title__en">CAREER ROADMAP</span>
+          <span class="section-title__ja">キャリアの歩み方</span>
+        </h2>
+        <div class="roadmap fade-in">
+          <div class="roadmap__steps">
+            <div class="roadmap__step">
+              <span class="roadmap__step-year">1年目</span>
+              <h4 class="roadmap__step-title">基礎を叩き込む</h4>
+              <p class="roadmap__step-desc">先輩について現場で基礎を学ぶ。道具の使い方、安全管理、現場のルール。まずは「見て、やって、覚える」。</p>
+            </div>
+            <div class="roadmap__step">
+              <span class="roadmap__step-year">3年目</span>
+              <h4 class="roadmap__step-title">一人前への挑戦</h4>
+              <p class="roadmap__step-desc">担当できる作業が増え、後輩への指導も始まる。資格取得にもチャレンジ。技術と人間力を磨く時期。</p>
+            </div>
+            <div class="roadmap__step">
+              <span class="roadmap__step-year">5年目</span>
+              <h4 class="roadmap__step-title">現場を任される</h4>
+              <p class="roadmap__step-desc">現場リーダーとして、工程管理やお客様対応も。チームを動かし、プロジェクトを完遂する達成感。</p>
+            </div>
+            <div class="roadmap__step">
+              <span class="roadmap__step-year">7年目〜</span>
+              <h4 class="roadmap__step-title">次のステージへ</h4>
+              <p class="roadmap__step-desc">棟梁、現場監督、設計リーダー——自分の強みを活かしたキャリアを選べる。独立支援制度もあり。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--white"></div>
+
+    <!-- Position Listings -->
+    <section class="career-section" id="positions">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          <span class="section-title__en">POSITIONS</span>
+          <span class="section-title__ja">募集職種</span>
+        </h2>
+        <div class="career__positions fade-in">
+          <div class="career__position">
+            <span class="career__position-badge">正社員</span>
+            <span class="career__position-title">大工職人</span>
+            <span class="career__position-arrow"></span>
+          </div>
+          <div class="career__position">
+            <span class="career__position-badge">正社員</span>
+            <span class="career__position-title">現場管理</span>
+            <span class="career__position-arrow"></span>
+          </div>
+          <div class="career__position">
+            <span class="career__position-badge">正社員</span>
+            <span class="career__position-title">内装仕上げ</span>
+            <span class="career__position-arrow"></span>
+          </div>
+          <div class="career__position">
+            <span class="career__position-badge">正社員</span>
+            <span class="career__position-title">設計スタッフ</span>
+            <span class="career__position-arrow"></span>
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="career__message fade-in" style="margin-top: 48px;">
+          <h3 class="career__message-heading">待遇・福利厚生</h3>
+          <p class="career__message-text">
+            各種社会保険完備 / 交通費支給 / 資格取得支援制度 / 社員旅行 / 工具支給制度 / 独立支援制度 / 社内イベント（BBQ・フットサルなど） / 有給休暇 / 慶弔休暇
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--gray"></div>
+
+    <!-- Entry Form -->
+    <section class="entry-section" id="entry">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          <span class="section-title__en">ENTRY</span>
+          <span class="section-title__ja">エントリーフォーム</span>
+        </h2>
+        <form class="entry-form fade-in" action="#" method="post">
+          <div class="form__group">
+            <label class="form__label" for="name">お名前<span class="form__required">必須</span></label>
+            <input type="text" id="name" name="name" class="form__input" placeholder="例：サンプル太郎" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">メールアドレス<span class="form__required">必須</span></label>
+            <input type="email" id="email" name="email" class="form__input" placeholder="例：sample@example.com" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">電話番号<span class="form__required">必須</span></label>
+            <input type="tel" id="phone" name="phone" class="form__input" placeholder="例：090-1234-5678" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="position">希望職種<span class="form__required">必須</span></label>
+            <select id="position" name="position" class="form__select" required>
+              <option value="" disabled selected>選択してください</option>
+              <option value="carpenter">大工職人</option>
+              <option value="manager">現場管理</option>
+              <option value="interior">内装仕上げ</option>
+              <option value="design">設計スタッフ</option>
+              <option value="other">その他・相談したい</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="message">メッセージ</label>
+            <textarea id="message" name="message" class="form__textarea" placeholder="自己PR、質問、希望の働き方など、自由にお書きください。"></textarea>
+          </div>
+          <button type="submit" class="form__submit">送信する</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA (JOIN US!) -->
+    <section class="cta">
+      <div class="cta__bg">
+        <img src="images/cta-bg.jpg" alt="夕焼けの現場とチーム" loading="lazy">
+        <div class="cta__overlay"></div>
+      </div>
+      <div class="cta__content fade-in">
+        <p class="cta__en">JOIN US!</p>
+        <p class="cta__ja">一緒に家をつくりませんか？</p>
+        <p class="cta__text">まずはカジュアルに話しませんか。<br>お気軽にエントリーください。</p>
+        <a href="#entry" class="btn btn--primary btn--lg">ENTRY →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <div class="footer__logo">
+          <span class="footer__logo-icon">🔨</span>
+          <span class="footer__logo-text">サンプル工務店</span>
+        </div>
+        <address class="footer__address">
+          〒150-0001 東京都渋谷区サンプル町4-5-6<br>
+          株式会社サンプル工務店
+        </address>
+        <div class="footer__social">
+          <a href="#" aria-label="X (Twitter)">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="フッターナビゲーション">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="job.html">しごとを知る</a></li>
+          <li><a href="culture.html">カルチャー</a></li>
+          <li><a href="members.html">メンバー紹介</a></li>
+          <li><a href="career.html">採用情報</a></li>
+          <li><a href="#">コーポレートサイト</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__copy">
+      <small>&copy; 2024 株式会社サンプル工務店 All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

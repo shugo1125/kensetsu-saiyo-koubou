@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エントリー | 株式会社サンプル建設</title>
+  <meta name="description" content="サンプル建設へのエントリーフォーム。未経験歓迎、書類選考なし。カジュアル面談も受け付けています。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-main">サンプル建設</span>
+        <span class="header__logo-sub">RECRUIT</span>
+      </a>
+      <nav class="header__nav" id="nav" aria-label="メインナビゲーション">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">トップ</a></li>
+          <li><a href="work.html" class="header__nav-link">仕事を知る</a></li>
+          <li><a href="people.html" class="header__nav-link">働く人</a></li>
+          <li><a href="recruit.html" class="header__nav-link">募集要項</a></li>
+          <li><a href="entry.html" class="header__nav-link header__nav-link--entry is-current">エントリー</a></li>
+        </ul>
+      </nav>
+      <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ページヒーロー -->
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <img src="images/hero-entry.jpg" alt="明るい現場で握手するスタッフ">
+        <div class="page-hero__overlay"></div>
+      </div>
+      <div class="page-hero__content">
+        <span class="page-hero__en">ENTRY</span>
+        <h1 class="page-hero__title">エントリー</h1>
+      </div>
+    </section>
+
+    <!-- パンくず -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol class="breadcrumb__list">
+        <li><a href="index.html">トップ</a></li>
+        <li>エントリー</li>
+      </ol>
+    </nav>
+
+    <!-- エントリーフォーム -->
+    <section class="entry-section" id="entry">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          <span class="section-title__en">ENTRY FORM</span>
+          <span class="section-title__ja">応募フォーム</span>
+        </h2>
+
+        <form class="entry-form fade-in" id="entry-form" novalidate>
+          <!-- 氏名 -->
+          <div class="form__group">
+            <label class="form__label" for="name">
+              お名前
+              <span class="form__required">必須</span>
+            </label>
+            <input type="text" id="name" name="name" class="form__input" placeholder="サンプル太郎" required autocomplete="name">
+            <p class="form__error" aria-live="polite"></p>
+          </div>
+
+          <!-- フリガナ -->
+          <div class="form__group">
+            <label class="form__label" for="kana">
+              フリガナ
+              <span class="form__required">必須</span>
+            </label>
+            <input type="text" id="kana" name="kana" class="form__input" placeholder="サンプルタロウ" required>
+            <p class="form__error" aria-live="polite"></p>
+          </div>
+
+          <!-- 生年月日 -->
+          <div class="form__group">
+            <label class="form__label" for="birthday">
+              生年月日
+              <span class="form__required">必須</span>
+            </label>
+            <input type="date" id="birthday" name="birthday" class="form__input" required>
+            <p class="form__error" aria-live="polite"></p>
+          </div>
+
+          <!-- 電話番号 -->
+          <div class="form__group">
+            <label class="form__label" for="tel">
+              電話番号
+              <span class="form__required">必須</span>
+            </label>
+            <input type="tel" id="tel" name="tel" class="form__input" placeholder="090-1234-5678" required autocomplete="tel">
+            <p class="form__error" aria-live="polite"></p>
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="form__group">
+            <label class="form__label" for="email">
+              メールアドレス
+              <span class="form__required">必須</span>
+            </label>
+            <input type="email" id="email" name="email" class="form__input" placeholder="sample@example.com" required autocomplete="email">
+            <p class="form__error" aria-live="polite"></p>
+          </div>
+
+          <!-- 希望職種 -->
+          <div class="form__group">
+            <label class="form__label" for="job-type">
+              希望職種
+              <span class="form__required">必須</span>
+            </label>
+            <select id="job-type" name="job-type" class="form__select" required>
+              <option value="">選択してください</option>
+              <option value="carpenter">大工職人</option>
+              <option value="manager">現場管理</option>
+              <option value="interior">内装仕上げ</option>
+              <option value="undecided">まだ決まっていない</option>
+            </select>
+            <p class="form__error" aria-live="polite"></p>
+          </div>
+
+          <!-- 経験有無 -->
+          <div class="form__group">
+            <fieldset>
+              <legend class="form__label">
+                建設業の経験
+                <span class="form__required">必須</span>
+              </legend>
+              <div class="form__radio-group">
+                <label class="form__radio">
+                  <input type="radio" name="experience" value="none" required>
+                  未経験
+                </label>
+                <label class="form__radio">
+                  <input type="radio" name="experience" value="less-3">
+                  3年未満
+                </label>
+                <label class="form__radio">
+                  <input type="radio" name="experience" value="more-3">
+                  3年以上
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- 志望動機 -->
+          <div class="form__group">
+            <label class="form__label" for="motivation">
+              志望動機・メッセージ
+              <span class="form__optional">任意</span>
+            </label>
+            <textarea id="motivation" name="motivation" class="form__textarea" placeholder="ご自由にお書きください。「まだ志望動機がまとまっていない」でもOKです。"></textarea>
+          </div>
+
+          <!-- 履歴書 -->
+          <div class="form__group">
+            <label class="form__label" for="resume">
+              履歴書
+              <span class="form__optional">任意</span>
+            </label>
+            <div class="form__file">
+              <input type="file" id="resume" name="resume" class="form__file-input" accept=".pdf,.doc,.docx">
+            </div>
+            <p class="form__hint">PDF / Word形式（5MB以内）</p>
+          </div>
+
+          <!-- 同意 -->
+          <div class="form__privacy">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">個人情報の取り扱いに同意する（お預かりした情報は採用選考の目的以外には使用しません）</label>
+          </div>
+          <p class="form__error" aria-live="polite"></p>
+
+          <!-- 送信ボタン -->
+          <div class="form__submit">
+            <button type="submit" class="btn btn--primary btn--lg btn--block">この内容でエントリーする</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- カジュアル面談 -->
+    <section class="casual-section" id="casual">
+      <div class="container">
+        <div class="casual fade-in">
+          <h2 class="casual__title">まずは話を聞きたい方へ</h2>
+          <p class="casual__text">「応募するかまだ決めてない」「雰囲気だけ知りたい」<br>そんな方はカジュアル面談からどうぞ。</p>
+          <ul class="casual__list">
+            <li>所要時間30分〜1時間</li>
+            <li>オンライン（Zoom）または対面を選べます</li>
+            <li>服装自由、履歴書不要</li>
+            <li>こちらから質問攻めにすることはありません</li>
+            <li>面談後の応募義務はありません</li>
+          </ul>
+          <a href="mailto:recruit@sample-kensetsu.example.com?subject=カジュアル面談の申し込み" class="btn btn--primary btn--lg">カジュアル面談を申し込む</a>
+          <p class="form__hint" style="margin-top: 16px;">recruit@sample-kensetsu.example.com 宛にメールが開きます</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 送信完了モーダル -->
+  <div class="modal" id="submit-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <div class="modal__icon" aria-hidden="true"></div>
+      <h2 class="modal__title" id="modal-title">エントリーありがとうございます</h2>
+      <p class="modal__text">ご入力いただいた内容を受け付けました。<br>3営業日以内にご連絡いたします。</p>
+      <button type="button" class="modal__close">閉じる</button>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <div class="footer__logo">
+          <span class="footer__logo-main">サンプル建設</span>
+          <span class="footer__logo-sub">RECRUIT</span>
+        </div>
+        <address class="footer__address">
+          〒150-0001 東京都渋谷区サンプル町1-2-3<br>
+          TEL: 03-1234-5678
+        </address>
+      </div>
+      <nav class="footer__nav" aria-label="フッターナビゲーション">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="work.html">仕事を知る</a></li>
+          <li><a href="people.html">働く人</a></li>
+          <li><a href="recruit.html">募集要項</a></li>
+          <li><a href="entry.html">エントリー</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__copy">
+      <small>&copy; 2024 株式会社サンプル建設 All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

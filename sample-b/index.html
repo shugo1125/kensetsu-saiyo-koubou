@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECRUIT | 株式会社サンプル工務店</title>
+  <meta name="description" content="株式会社サンプル工務店の採用サイト。設計から施工まで一気通貫。全部やりたい人、募集中。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-icon">🔨</span>
+        <span class="header__logo-text">サンプル工務店</span>
+        <span class="header__logo-sub">RECRUIT</span>
+      </a>
+      <nav class="header__nav" id="nav" aria-label="メインナビゲーション">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link is-current">TOP</a></li>
+          <li><a href="job.html" class="header__nav-link">しごとを知る</a></li>
+          <li><a href="culture.html" class="header__nav-link">カルチャー</a></li>
+          <li><a href="members.html" class="header__nav-link">メンバー紹介</a></li>
+          <li><a href="career.html" class="header__nav-link">採用情報</a></li>
+          <li><a href="career.html#entry" class="header__nav-link header__nav-link--entry">ENTRY</a></li>
+        </ul>
+      </nav>
+      <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーロー（ばーん演出） -->
+    <section class="hero">
+      <div class="hero__slides">
+        <div class="hero__slide is-active">
+          <img src="images/hero-1.jpg" alt="現場で作業する職人たち">
+          <div class="hero__slide-overlay"></div>
+        </div>
+        <div class="hero__slide">
+          <img src="images/hero-2.jpg" alt="チームで打ち合わせするメンバー">
+          <div class="hero__slide-overlay"></div>
+        </div>
+        <div class="hero__slide">
+          <img src="images/hero-3.jpg" alt="完成した住宅の前で集合写真">
+          <div class="hero__slide-overlay"></div>
+        </div>
+      </div>
+      <div class="hero__flames">
+        <div class="hero__flame"></div>
+        <div class="hero__flame hero__flame--2"></div>
+        <div class="hero__flame hero__flame--3"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__catch">SAMPLE KOUMUTEN ENERGY</p>
+        <h1 class="hero__big-text">全部<span>やる。</span></h1>
+        <p class="hero__sub">設計も施工もアフターも。<br>地域密着40年、家づくりの何でも屋。</p>
+        <div class="hero__actions">
+          <a href="career.html#entry" class="btn btn--primary btn--lg">ENTRY</a>
+          <a href="job.html" class="btn btn--outline-white btn--lg">しごとを知る</a>
+        </div>
+      </div>
+      <div class="hero__indicators">
+        <button class="hero__indicator is-active" type="button" aria-label="スライド1"></button>
+        <button class="hero__indicator" type="button" aria-label="スライド2"></button>
+        <button class="hero__indicator" type="button" aria-label="スライド3"></button>
+      </div>
+    </section>
+
+    <!-- Concept -->
+    <section class="concept" id="concept">
+      <div class="container">
+        <div class="fade-in">
+          <div class="concept__badge">ALL IN ONE !</div>
+        </div>
+        <h2 class="concept__heading fade-in">
+          お客様と職人の間に、<br><em>サンプル工務店</em>あり。
+        </h2>
+        <p class="concept__text fade-in">
+          私たちは、設計・施工・アフターメンテナンスまでを一気通貫で手がける地域密着型の工務店です。注文住宅、リフォーム、店舗内装——お客様の「こうしたい」を、チーム全員で形にします。図面を引く人、木を刻む人、仕上げる人。全部うちにいる。だから速くて、うまくて、融通がきく。それがサンプル工務店の強みです。
+        </p>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--navy"></div>
+
+    <!-- Job Section -->
+    <section class="job-section" id="job">
+      <div class="container">
+        <h2 class="section-title section-title--white fade-in">
+          <span class="section-title__en">OUR WORK</span>
+          <span class="section-title__ja">しごとを知る</span>
+        </h2>
+        <div class="job__intro fade-in">
+          <h3 class="job__intro-heading">設計からアフターまで、全部やる。</h3>
+          <p class="job__intro-text">サンプル工務店のスタッフは、一つの専門だけじゃない。現場を知り、お客様を知り、チームを動かす。だから成長が速い。</p>
+        </div>
+        <div class="job__grid">
+          <div class="job__card fade-in">
+            <span class="job__card-num">01</span>
+            <h4 class="job__card-title">設計・プランニング</h4>
+            <p class="job__card-text">お客様の暮らしをヒアリングし、理想の住まいを図面に落とし込む。</p>
+          </div>
+          <div class="job__card fade-in">
+            <span class="job__card-num">02</span>
+            <h4 class="job__card-title">大工工事</h4>
+            <p class="job__card-text">家の骨組みから造作まで。木のぬくもりを活かした匠の技。</p>
+          </div>
+          <div class="job__card fade-in">
+            <span class="job__card-num">03</span>
+            <h4 class="job__card-title">現場管理</h4>
+            <p class="job__card-text">工程・品質・安全を統括。チームの司令塔。</p>
+          </div>
+          <div class="job__card fade-in">
+            <span class="job__card-num">04</span>
+            <h4 class="job__card-title">内装仕上げ</h4>
+            <p class="job__card-text">クロス、床材、塗装。住空間の仕上げを美しく。</p>
+          </div>
+          <div class="job__card fade-in">
+            <span class="job__card-num">05</span>
+            <h4 class="job__card-title">リフォーム</h4>
+            <p class="job__card-text">既存の住まいを生まれ変わらせる。お客様の「もっとこうしたい」に応える。</p>
+          </div>
+          <div class="job__card fade-in">
+            <span class="job__card-num">06</span>
+            <h4 class="job__card-title">店舗内装</h4>
+            <p class="job__card-text">カフェ、美容室、クリニック。空間デザインの幅が広がる。</p>
+          </div>
+        </div>
+        <div class="job__more fade-in">
+          <a href="job.html" class="btn btn--primary">詳しく見る！</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--gray"></div>
+
+    <!-- Culture Section -->
+    <section class="culture-section" id="culture">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          <span class="section-title__en">CULTURE</span>
+          <span class="section-title__ja">工務店カルチャー</span>
+        </h2>
+        <div class="culture__grid">
+          <article class="culture__card fade-in">
+            <div class="culture__card-img">
+              <img src="images/culture-office.jpg" alt="道具が整然と並ぶ作業場" loading="lazy">
+            </div>
+            <div class="culture__card-body">
+              <span class="culture__card-tag">WORKSPACE</span>
+              <h3 class="culture__card-title">道具を大切にする文化</h3>
+              <p class="culture__card-text">道具の手入れは職人の基本。作業場は毎日清掃。整理整頓された環境が、良い仕事を生む。</p>
+            </div>
+          </article>
+          <article class="culture__card fade-in">
+            <div class="culture__card-img">
+              <img src="images/culture-hybrid.jpg" alt="若手とベテランが話し合う様子" loading="lazy">
+            </div>
+            <div class="culture__card-body">
+              <span class="culture__card-tag">TEAM</span>
+              <h3 class="culture__card-title">年齢関係なく、フラット</h3>
+              <p class="culture__card-text">20代から50代まで。年齢も経験も違うけど、良いものをつくりたい気持ちは同じ。意見は誰でも言える。</p>
+            </div>
+          </article>
+          <article class="culture__card fade-in">
+            <div class="culture__card-img">
+              <img src="images/culture-event.jpg" alt="BBQで楽しむメンバー" loading="lazy">
+            </div>
+            <div class="culture__card-body">
+              <span class="culture__card-tag">EVENT</span>
+              <h3 class="culture__card-title">オンもオフも全力</h3>
+              <p class="culture__card-text">BBQ、釣り、フットサル。仕事以外のつながりが、現場のチームワークを強くする。</p>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center; margin-top:40px;" class="fade-in">
+          <a href="culture.html" class="btn btn--navy">詳しく見る！</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--white-from-gray"></div>
+
+    <!-- Members Section -->
+    <section class="members-section" id="members">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          <span class="section-title__en">MEMBERS</span>
+          <span class="section-title__ja">メンバー紹介</span>
+        </h2>
+        <div class="members__grid">
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-1a.jpg" alt="サンプル大将のポートレート" class="member__photo-normal">
+              <img src="images/member-1b.jpg" alt="サンプル大将の変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">代表取締役</p>
+            <p class="member__name">サンプル大将</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-2a.jpg" alt="サンプル棟梁のポートレート" class="member__photo-normal">
+              <img src="images/member-2b.jpg" alt="サンプル棟梁の変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">棟梁</p>
+            <p class="member__name">サンプル棟梁</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-3a.jpg" alt="サンプル番頭のポートレート" class="member__photo-normal">
+              <img src="images/member-3b.jpg" alt="サンプル番頭の変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">現場管理</p>
+            <p class="member__name">サンプル番頭</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-4a.jpg" alt="サンプルノミのポートレート" class="member__photo-normal">
+              <img src="images/member-4b.jpg" alt="サンプルノミの変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">大工 5年目</p>
+            <p class="member__name">サンプルノミ</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-5a.jpg" alt="サンプルケンのポートレート" class="member__photo-normal">
+              <img src="images/member-5b.jpg" alt="サンプルケンの変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">大工 2年目</p>
+            <p class="member__name">サンプルケン</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-6a.jpg" alt="サンプルハナのポートレート" class="member__photo-normal">
+              <img src="images/member-6b.jpg" alt="サンプルハナの変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">設計</p>
+            <p class="member__name">サンプルハナ</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-7a.jpg" alt="サンプルリュウのポートレート" class="member__photo-normal">
+              <img src="images/member-7b.jpg" alt="サンプルリュウの変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">内装</p>
+            <p class="member__name">サンプルリュウ</p>
+          </div>
+          <div class="member__card fade-in">
+            <div class="member__photo">
+              <img src="images/member-8a.jpg" alt="サンプルミキのポートレート" class="member__photo-normal">
+              <img src="images/member-8b.jpg" alt="サンプルミキの変顔" class="member__photo-funny">
+            </div>
+            <p class="member__role">事務・広報</p>
+            <p class="member__name">サンプルミキ</p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:0.75rem; color:#999; margin-top:16px;">※ ニックネームで表示しています</p>
+        <div style="text-align:center; margin-top:24px;" class="fade-in">
+          <a href="members.html" class="btn btn--navy">全員見る！</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--navy"></div>
+
+    <!-- Evaluation Section -->
+    <section class="eval-section" id="eval">
+      <div class="container">
+        <h2 class="section-title section-title--white fade-in">
+          <span class="section-title__en">ADD-ON EVALUATION</span>
+          <span class="section-title__ja">独自の評価制度</span>
+        </h2>
+        <div class="eval__intro fade-in">
+          <p class="eval__intro-text">通常の業績評価に加え、サンプル工務店では独自の「add-on評価」を導入。数字では測れない"人としての力"も正当に評価します。</p>
+        </div>
+        <div class="eval__categories">
+          <div class="fade-in">
+            <h3 class="eval__category-title">🔥 人間力</h3>
+            <div class="eval__list">
+              <div class="eval__item"><span class="eval__item-num">01</span><span class="eval__item-text">ストイック精神</span></div>
+              <div class="eval__item"><span class="eval__item-num">02</span><span class="eval__item-text">許容力・包容力</span></div>
+              <div class="eval__item"><span class="eval__item-num">03</span><span class="eval__item-text">チームワーク</span></div>
+              <div class="eval__item"><span class="eval__item-num">04</span><span class="eval__item-text">キャラクター性</span></div>
+              <div class="eval__item"><span class="eval__item-num">05</span><span class="eval__item-text">ポジティブ性</span></div>
+              <div class="eval__item"><span class="eval__item-num">06</span><span class="eval__item-text">愛され力</span></div>
+            </div>
+          </div>
+          <div class="fade-in">
+            <h3 class="eval__category-title">⚡ マネジメント力</h3>
+            <div class="eval__list">
+              <div class="eval__item"><span class="eval__item-num">01</span><span class="eval__item-text">教育・トレーニング</span></div>
+              <div class="eval__item"><span class="eval__item-num">02</span><span class="eval__item-text">闘魂注入</span></div>
+              <div class="eval__item"><span class="eval__item-num">03</span><span class="eval__item-text">落ち込んだメンバーのケア</span></div>
+              <div class="eval__item"><span class="eval__item-num">04</span><span class="eval__item-text">気遣いや声がけ</span></div>
+              <div class="eval__item"><span class="eval__item-num">05</span><span class="eval__item-text">ナイスアシスト</span></div>
+              <div class="eval__item"><span class="eval__item-num">06</span><span class="eval__item-text">俯瞰力と調整力</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼ Triangle Divider -->
+    <div class="triangle-divider triangle-divider--white"></div>
+
+    <!-- News Section -->
+    <section class="news-section" id="news">
+      <div class="container">
+        <h2 class="section-title fade-in">
+          <span class="section-title__en">NEWS</span>
+          <span class="section-title__ja">工務店のホンネ</span>
+        </h2>
+        <div class="news__list fade-in">
+          <a href="#" class="news__item">
+            <span class="news__date">2024.12.01</span>
+            <span class="news__title">【社員インタビュー】入社2年目のサンプルケンに聞く、工務店のリアル</span>
+          </a>
+          <a href="#" class="news__item">
+            <span class="news__date">2024.11.15</span>
+            <span class="news__title">渋谷区の注文住宅が完成しました。施工事例をご紹介</span>
+          </a>
+          <a href="#" class="news__item">
+            <span class="news__date">2024.10.28</span>
+            <span class="news__title">作業場リニューアル完了！新しい工房をご紹介</span>
+          </a>
+          <a href="#" class="news__item">
+            <span class="news__date">2024.10.10</span>
+            <span class="news__title">【イベントレポート】住宅建築フェア出展の裏側</span>
+          </a>
+          <a href="#" class="news__item">
+            <span class="news__date">2024.09.20</span>
+            <span class="news__title">秋の社内BBQ開催！チームビルディングの様子をお届け</span>
+          </a>
+          <a href="#" class="news__item">
+            <span class="news__date">2024.09.01</span>
+            <span class="news__title">新卒2名・中途1名が入社。サンプル工務店ファミリーに仲間入り！</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA (JOIN US!) -->
+    <section class="cta">
+      <div class="cta__bg">
+        <img src="images/cta-bg.jpg" alt="夕焼けの現場とチーム" loading="lazy">
+        <div class="cta__overlay"></div>
+      </div>
+      <div class="cta__content fade-in">
+        <p class="cta__en">JOIN US!</p>
+        <p class="cta__ja">一緒に家をつくりませんか？</p>
+        <p class="cta__text">「全部やりたい」人を待っています。<br>まずはカジュアルに話しませんか。</p>
+        <a href="career.html#entry" class="btn btn--primary btn--lg">ENTRY →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <div class="footer__logo">
+          <span class="footer__logo-icon">🔨</span>
+          <span class="footer__logo-text">サンプル工務店</span>
+        </div>
+        <address class="footer__address">
+          〒150-0001 東京都渋谷区サンプル町4-5-6<br>
+          株式会社サンプル工務店
+        </address>
+        <div class="footer__social">
+          <a href="#" aria-label="X (Twitter)">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="フッターナビゲーション">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="job.html">しごとを知る</a></li>
+          <li><a href="culture.html">カルチャー</a></li>
+          <li><a href="members.html">メンバー紹介</a></li>
+          <li><a href="career.html">採用情報</a></li>
+          <li><a href="#">コーポレートサイト</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__copy">
+      <small>&copy; 2024 株式会社サンプル工務店 All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

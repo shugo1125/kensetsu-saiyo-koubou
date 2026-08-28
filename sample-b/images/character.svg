@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" fill="none">
+  <!-- 影 -->
+  <ellipse cx="250" cy="680" rx="140" ry="18" fill="#000" opacity="0.15"/>
+
+  <!-- 右足 -->
+  <rect x="280" y="560" width="70" height="110" rx="20" fill="#2a1a0a"/>
+  <!-- 安全靴 -->
+  <rect x="270" y="640" width="95" height="45" rx="14" fill="#333"/>
+  <rect x="270" y="640" width="95" height="15" rx="7" fill="#f5a623"/>
+
+  <!-- 左足 -->
+  <rect x="150" y="550" width="70" height="115" rx="20" fill="#2a1a0a"/>
+  <!-- 安全靴 -->
+  <rect x="135" y="635" width="95" height="45" rx="14" fill="#333"/>
+  <rect x="135" y="635" width="95" height="15" rx="7" fill="#f5a623"/>
+
+  <!-- 体（作業着） -->
+  <rect x="120" y="280" width="260" height="290" rx="40" fill="#00b4d8"/>
+  <!-- 作業着ライン -->
+  <rect x="235" y="280" width="12" height="290" rx="4" fill="#0096b7"/>
+  <!-- ポケット -->
+  <rect x="155" y="420" width="70" height="55" rx="8" fill="#0096b7" stroke="#90e0ef" stroke-width="2"/>
+  <rect x="280" y="420" width="70" height="55" rx="8" fill="#0096b7" stroke="#90e0ef" stroke-width="2"/>
+  <!-- ペン（ポケットから） -->
+  <rect x="300" y="405" width="6" height="30" rx="3" fill="#ff6b6b"/>
+
+  <!-- 右腕 -->
+  <g>
+    <!-- 上腕 -->
+    <rect x="370" y="300" width="65" height="120" rx="25" fill="#00b4d8" transform="rotate(15 402 360)"/>
+    <!-- 前腕（肌色） -->
+    <rect x="385" y="400" width="55" height="80" rx="22" fill="#e8c39e" transform="rotate(10 410 440)"/>
+    <!-- 手 -->
+    <circle cx="415" cy="480" r="28" fill="#e8c39e"/>
+    <!-- ハンマー持ってる -->
+    <rect x="400" y="370" width="14" height="140" rx="5" fill="#8B4513" transform="rotate(-15 407 440)"/>
+    <rect x="375" y="350" width="65" height="40" rx="6" fill="#555" transform="rotate(-15 407 370)"/>
+    <rect x="380" y="350" width="55" height="12" rx="4" fill="#777" transform="rotate(-15 407 356)"/>
+  </g>
+
+  <!-- 左腕 -->
+  <g>
+    <rect x="70" y="310" width="65" height="110" rx="25" fill="#00b4d8" transform="rotate(-10 102 365)"/>
+    <rect x="60" y="400" width="55" height="75" rx="22" fill="#e8c39e" transform="rotate(-5 87 437)"/>
+    <circle cx="82" cy="475" r="26" fill="#e8c39e"/>
+    <!-- 親指立ててる -->
+    <ellipse cx="68" cy="452" rx="12" ry="22" fill="#e8c39e" transform="rotate(15 68 452)"/>
+  </g>
+
+  <!-- 首 -->
+  <rect x="210" y="250" width="80" height="50" rx="15" fill="#e8c39e"/>
+
+  <!-- 顔 -->
+  <ellipse cx="250" cy="195" rx="105" ry="95" fill="#e8c39e"/>
+
+  <!-- ヘルメット -->
+  <ellipse cx="250" cy="140" rx="115" ry="80" fill="#f5a623"/>
+  <rect x="135" y="140" width="230" height="40" rx="6" fill="#f5a623"/>
+  <rect x="130" y="165" width="240" height="14" rx="4" fill="#e09510"/>
+  <!-- ヘルメットのツバ -->
+  <rect x="120" y="172" width="260" height="10" rx="5" fill="#d4880a"/>
+  <!-- ヘルメットライン -->
+  <rect x="240" y="75" width="20" height="90" rx="6" fill="#e09510"/>
+
+  <!-- 目 -->
+  <g>
+    <!-- 左目 -->
+    <ellipse cx="210" cy="200" rx="22" ry="24" fill="#fff"/>
+    <circle cx="215" cy="202" r="12" fill="#1a2035"/>
+    <circle cx="219" cy="197" r="4" fill="#fff"/>
+    <!-- 右目 -->
+    <ellipse cx="290" cy="200" rx="22" ry="24" fill="#fff"/>
+    <circle cx="285" cy="202" r="12" fill="#1a2035"/>
+    <circle cx="289" cy="197" r="4" fill="#fff"/>
+  </g>
+
+  <!-- 眉毛（太く力強く） -->
+  <rect x="188" y="178" width="45" height="8" rx="4" fill="#2a1a0a" transform="rotate(-5 210 182)"/>
+  <rect x="268" y="178" width="45" height="8" rx="4" fill="#2a1a0a" transform="rotate(5 290 182)"/>
+
+  <!-- 鼻 -->
+  <ellipse cx="250" cy="225" rx="10" ry="8" fill="#d4a574"/>
+
+  <!-- 口（にっかり笑い） -->
+  <path d="M215 248 Q250 280 285 248" stroke="#2a1a0a" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- 歯 -->
+  <rect x="232" y="250" width="36" height="14" rx="4" fill="#fff"/>
+
+  <!-- 頬 -->
+  <ellipse cx="175" cy="230" rx="18" ry="12" fill="#ff9999" opacity="0.4"/>
+  <ellipse cx="325" cy="230" rx="18" ry="12" fill="#ff9999" opacity="0.4"/>
+
+  <!-- 安全ベスト（蛍光） -->
+  <g opacity="0.9">
+    <rect x="145" y="290" width="30" height="180" rx="4" fill="#f5a623" opacity="0.6"/>
+    <rect x="325" y="290" width="30" height="180" rx="4" fill="#f5a623" opacity="0.6"/>
+    <rect x="145" y="350" width="210" height="10" rx="3" fill="#ccc" opacity="0.6"/>
+    <rect x="145" y="450" width="210" height="10" rx="3" fill="#ccc" opacity="0.6"/>
+  </g>
+</svg>

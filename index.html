@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>建設採用サイト工房｜建設会社の採用サイト専門</title>
+<meta name="description" content="建設会社の採用サイトだけを作っています。取材から原稿まで一式で50万円。全国オンライン対応、撮影のための訪問はありません。">
+<style>
+  :root{
+    --navy:#12233a; --ink:#1a1a1a; --sub:#5a6472;
+    --accent:#c8471f; --line:#e2e5ea; --bg:#ffffff; --bg2:#f5f7fa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.85;
+    font-size:16px; -webkit-text-size-adjust:100%;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
+    border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(6px);
+  }
+  .hd{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:700;font-size:17px;letter-spacing:.02em;text-decoration:none}
+  .logo small{display:block;font-size:11px;font-weight:400;color:var(--sub);letter-spacing:.08em}
+  .hd a.cta{
+    background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;
+    padding:10px 20px;border-radius:4px;white-space:nowrap;
+  }
+
+  /* hero */
+  .hero{background:var(--navy);color:#fff;padding:88px 0 76px}
+  .hero .eyebrow{
+    color:#ffb59b;font-size:13px;font-weight:700;letter-spacing:.14em;margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(28px,5.2vw,46px);line-height:1.45;font-weight:700;letter-spacing:.01em;
+    margin-bottom:28px;
+  }
+  .hero p{font-size:17px;color:#c9d3e0;max-width:640px}
+  .hero .btns{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:700;font-size:15px;
+    padding:15px 30px;border-radius:4px;
+  }
+  .btn-p{background:var(--accent);color:#fff}
+  .btn-g{border:1px solid rgba(255,255,255,.45);color:#fff}
+
+  /* sections */
+  section{padding:80px 0}
+  .alt{background:var(--bg2)}
+  h2{
+    font-size:clamp(21px,3.4vw,29px);line-height:1.5;font-weight:700;
+    letter-spacing:.01em;margin-bottom:14px;
+  }
+  h2 .num{color:var(--accent);font-size:13px;display:block;letter-spacing:.14em;margin-bottom:10px}
+  .lead{color:var(--sub);font-size:16px;margin-bottom:40px;max-width:720px}
+  h3{font-size:18px;font-weight:700;margin-bottom:8px}
+
+  /* problem list */
+  .prob{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .prob div{background:#fff;padding:22px 24px}
+  .prob b{color:var(--navy);display:block;font-size:17px;margin-bottom:4px}
+  .prob span{color:var(--sub);font-size:15px}
+
+  /* pages */
+  .pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .page{border:1px solid var(--line);border-radius:6px;padding:22px;background:#fff}
+  .page .n{
+    display:inline-block;background:var(--navy);color:#fff;font-size:12px;font-weight:700;
+    width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;margin-bottom:12px;
+  }
+  .page p{font-size:14.5px;color:var(--sub)}
+
+  /* samples */
+  .samples{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .sample{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+  .sample .thumb{aspect-ratio:16/10;background:var(--navy);position:relative;overflow:hidden}
+  .sample .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .sample .body{padding:22px 24px 26px}
+  .sample .tag{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;
+    color:var(--accent);margin-bottom:8px;
+  }
+  .sample p{font-size:14.5px;color:var(--sub);margin-bottom:16px}
+  .sample a{
+    display:inline-block;font-weight:700;font-size:14px;text-decoration:none;
+    border:1px solid var(--navy);color:var(--navy);padding:10px 22px;border-radius:4px;
+  }
+
+  /* price */
+  .price{border:2px solid var(--navy);border-radius:8px;overflow:hidden;background:#fff}
+  .price .top{background:var(--navy);color:#fff;padding:22px 28px}
+  .price .top b{font-size:17px}
+  .price .amount{padding:30px 28px;border-bottom:1px solid var(--line)}
+  .price .amount .yen{font-size:clamp(34px,6vw,50px);font-weight:700;letter-spacing:-.01em;line-height:1.2}
+  .price .amount .yen small{font-size:18px;font-weight:700;margin-left:4px}
+  .price .amount .note{color:var(--sub);font-size:14.5px;margin-top:8px}
+  .price ul{list-style:none;padding:26px 28px}
+  .price li{padding-left:26px;position:relative;margin-bottom:11px;font-size:15.5px}
+  .price li::before{
+    content:"";position:absolute;left:2px;top:11px;width:12px;height:6px;
+    border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg);
+  }
+  .price .foot{background:var(--bg2);padding:20px 28px;font-size:14.5px;color:var(--sub)}
+
+  /* compare */
+  .cmp{width:100%;border-collapse:collapse;font-size:15.5px;background:#fff}
+  .cmp th,.cmp td{border:1px solid var(--line);padding:15px 16px;text-align:left;vertical-align:top}
+  .cmp thead th{background:var(--navy);color:#fff;font-weight:700}
+  .cmp tbody th{background:var(--bg2);font-weight:700;width:30%}
+  .cmp .good{color:var(--navy);font-weight:700}
+
+  /* flow */
+  .flow{counter-reset:s;list-style:none}
+  .flow li{
+    counter-increment:s;position:relative;padding:0 0 30px 62px;border-left:2px solid var(--line);
+    margin-left:19px;
+  }
+  .flow li:last-child{border-left-color:transparent;padding-bottom:0}
+  .flow li::before{
+    content:counter(s);position:absolute;left:-20px;top:-2px;width:38px;height:38px;
+    background:var(--navy);color:#fff;border-radius:50%;font-weight:700;font-size:15px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .flow p{color:var(--sub);font-size:15px}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  details summary{
+    font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;
+    padding-right:32px;position:relative;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{
+    content:"＋";position:absolute;right:4px;top:0;color:var(--accent);font-weight:700;
+  }
+  details[open] summary::after{content:"−"}
+  details p{color:var(--sub);font-size:15px;margin-top:12px}
+
+  /* cta */
+  .cta-band{background:var(--navy);color:#fff;text-align:center;padding:76px 0}
+  .cta-band h2{color:#fff}
+  .cta-band p{color:#c9d3e0;margin-bottom:32px}
+
+  /* company */
+  .co{width:100%;border-collapse:collapse;font-size:15.5px}
+  .co th,.co td{border-bottom:1px solid var(--line);padding:15px 4px;text-align:left;vertical-align:top}
+  .co th{width:30%;font-weight:700;color:var(--navy)}
+
+  footer{background:var(--navy);color:#8fa3bb;padding:36px 0;font-size:13.5px}
+  .footer-in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer b{color:#fff;font-size:15px}
+
+  @media(max-width:720px){
+    section{padding:58px 0}
+    .hero{padding:60px 0 54px}
+    .samples{grid-template-columns:1fr}
+    .hd a.cta{padding:9px 14px;font-size:13px}
+    .cmp tbody th{width:36%}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top">建設採用サイト工房<small>建設会社の採用サイト専門</small></a>
+    <a class="cta" href="#contact">相談する</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">建設会社の採用サイト専門</p>
+    <h1>求人にお金をかけても、<br>応募が来ない会社へ。</h1>
+    <p>応募を決めているのは求人票ではなく、そのあとに見られる<b style="color:#fff">御社のサイト</b>です。建設会社の採用サイトだけを作っています。取材・原稿・制作まで一式で50万円。全国どこでもオンラインで対応します。</p>
+    <div class="btns">
+      <a class="btn btn-p" href="#samples">制作したサイトを見る</a>
+      <a class="btn btn-g" href="#price">料金を見る</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">WHY</span>求人媒体に出しても、そこで終わっていませんか</h2>
+    <p class="lead">応募を検討している人は、必ず社名を検索します。そこで出てくるページが次のような状態だと、そこで離脱します。媒体に払った掲載料は、その一瞬で無駄になります。</p>
+    <div class="prob">
+      <div><b>採用ページが数百字しかない</b><span>年間休日120日、賞与年3回といった良い条件を出していても、サイトに書かれていなければ伝わりません。</span></div>
+      <div><b>社員の顔と声がない</b><span>どんな人が働いているか分からない会社に、20代は応募しません。給与や休日と同じくらい見られています。</span></div>
+      <div><b>現場の写真がない</b><span>何をする仕事なのかが想像できません。未経験者ほどここで判断します。</span></div>
+      <div><b>サイトの更新が10年以上止まっている</b><span>「この会社、大丈夫だろうか」と受け取られます。事業が順調でも、そう見えません。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2><span class="num">WHAT</span>お作りするもの</h2>
+    <p class="lead">応募者が知りたいことだけで構成した、採用専用のサイトを一式でお作りします。今お使いの会社サイトには手を加えません。別に立ち上げてお渡しします。</p>
+    <div class="pages">
+      <div class="page"><span class="n">1</span><h3>トップ</h3><p>どんな仕事で、誰を募集しているのかが一目で分かる入口。</p></div>
+      <div class="page"><span class="n">2</span><h3>仕事を知る</h3><p>職種ごとの仕事内容、1日の流れ、入社後のキャリアと資格支援。</p></div>
+      <div class="page"><span class="n">3</span><h3>働く人</h3><p>社員インタビュー2〜3本。前職、入社理由、大変だったこと。</p></div>
+      <div class="page"><span class="n">4</span><h3>募集要項</h3><p>給与、休日、待遇、福利厚生、選考の流れ、よくある質問。</p></div>
+      <div class="page"><span class="n">5</span><h3>応募フォーム</h3><p>スマホから数分で送れる応募窓口。カジュアル面談の導線も。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="samples">
+  <div class="wrap">
+    <h2><span class="num">SAMPLE</span>2つの型から選べます</h2>
+    <p class="lead">ゼロからデザインを起こすのではなく、建設会社向けに設計した2つの型をご用意しています。募集職種と社風に合う方を選んでいただき、中身を御社の取材内容に差し替えてお作りします。だからこの価格で、この期間で仕上がります。</p>
+    <div class="samples">
+      <div class="sample">
+        <div class="thumb"><img src="images/sample-a.jpg" alt="サンプルA 職人・施工管理の採用サイト"></div>
+        <div class="body">
+          <span class="tag">TYPE A</span>
+          <h3>現場と数字で見せる型</h3>
+          <p>現場写真を大きく使い、平均年齢・年間休日・未経験入社率といった数字を前に出します。未経験の不安を先回りして解消する構成。職人・施工管理の募集に向いています。</p>
+          <a href="sample-a/" target="_blank" rel="noopener">サンプルを見る</a>
+        </div>
+      </div>
+      <div class="sample">
+        <div class="thumb"><img src="images/sample-b.jpg" alt="サンプルB 会社の姿勢と人で見せる採用サイト"></div>
+        <div class="body">
+          <span class="tag">TYPE B</span>
+          <h3>会社の姿勢と人で見せる型</h3>
+          <p>手がける仕事の幅と、働く人を前に出す構成。設計から施工まで一貫している会社や、複数の職種をまとめて募集したい会社に向いています。</p>
+          <a href="sample-b/" target="_blank" rel="noopener">サンプルを見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2><span class="num">CORE</span>差がつくのは、デザインではなく中身です</h2>
+    <p class="lead">応募するかどうかを決めている情報は、ほとんどが社内にあります。ただ、社長ご自身では言葉になっていないことが多い。そこを引き出して、載る形に整えるのが私たちの仕事です。</p>
+    <table class="cmp">
+      <thead><tr><th>応募者が見ているもの</th><th>どこから持ってくるか</th></tr></thead>
+      <tbody>
+        <tr><th>給与が具体的に書いてあるか</th><td>ヒアリング</td></tr>
+        <tr><th>休日が本当に取れるか</th><td>ヒアリング</td></tr>
+        <tr><th>社員の顔と、実際の言葉</th><td>社員インタビュー（オンライン）</td></tr>
+        <tr><th>現場の様子</th><td>御社にある施工実績の写真</td></tr>
+        <tr><th>資格取得の支援があるか</th><td>ヒアリング</td></tr>
+        <tr><th>寮・車貸与の有無</th><td>ヒアリング</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:28px;margin-bottom:0">写真は御社にある施工実績のものをそのまま使います。足りない場合は、スマホでの撮り方をまとめた手引きをお渡しします。<b>撮影のための訪問はしません。</b>だから全国どこでも、この料金で承れます。</p>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap narrow">
+    <h2><span class="num">PRICE</span>料金</h2>
+    <p class="lead">追加費用はありません。取材も原稿も込みの金額です。</p>
+    <div class="price">
+      <div class="top"><b>採用サイト 新規構築</b></div>
+      <div class="amount">
+        <div class="yen">50<small>万円</small><span style="font-size:16px;font-weight:400;color:var(--sub)">（税別・一括）</span></div>
+        <div class="note">＋ 保守 月額 1.5万円（原稿の差し替え・更新対応）</div>
+      </div>
+      <ul>
+        <li>ヒアリング・社員インタビュー（オンライン）</li>
+        <li>原稿の作成</li>
+        <li>5ページ構成の制作一式</li>
+        <li>応募フォームの設置</li>
+        <li>スマホ・タブレット対応</li>
+        <li>公開までの設定作業</li>
+      </ul>
+      <div class="foot">サーバー・ドメインは御社名義でご契約いただきます（月1,000円程度）。お手続きの代行も承ります。<b>名義が御社であることが、サイトが御社のものである証明になります。</b></div>
+    </div>
+
+    <h2 style="margin-top:64px"><span class="num">COMPARE</span>毎年払い続けるか、一度で自社のものにするか</h2>
+    <table class="cmp">
+      <thead><tr><th></th><th>月額制のサービス</th><th class="good">建設採用サイト工房</th></tr></thead>
+      <tbody>
+        <tr><th>初期費用</th><td>0円</td><td>50万円</td></tr>
+        <tr><th>月額</th><td>3万円前後</td><td class="good">1.5万円（保守のみ）</td></tr>
+        <tr><th>5年間の総額</th><td>約180万円</td><td class="good">約140万円</td></tr>
+        <tr><th>解約したら</th><td>サイトは消えます</td><td class="good">御社の資産として残ります</td></tr>
+        <tr><th>中身の作り方</th><td>テンプレートに流し込み</td><td class="good">1社ずつ取材して書く</td></tr>
+      </tbody>
+    </table>
+    <p class="lead" style="margin-top:24px;margin-bottom:0"><b>借り物か、資産か。</b>月額契約のサイトは、払い続けている間だけ存在します。お渡しするものは、御社の資産として残ります。</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2><span class="num">FLOW</span>進め方</h2>
+    <p class="lead">ご連絡から公開まで、およそ1か月半です。すべてオンラインで完結します。</p>
+    <ol class="flow">
+      <li><h3>ご相談（30分・オンライン）</h3><p>今の採用の状況と、募集したい職種をお聞きします。無理にお勧めすることはありません。</p></li>
+      <li><h3>お見積り・型のご提案</h3><p>2つの型のどちらが合うかをご提案します。ここまで費用はかかりません。</p></li>
+      <li><h3>取材（2〜3回・各1時間）</h3><p>社長と、可能であれば社員の方2〜3名にお話を伺います。オンラインで結構です。</p></li>
+      <li><h3>原稿のご確認</h3><p>こちらで書いた原稿をご確認いただきます。事実と違うところを直してください。</p></li>
+      <li><h3>制作・公開</h3><p>サーバーの設定まで行い、公開します。以降は保守で更新に対応します。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2><span class="num">FAQ</span>よくあるご質問</h2>
+    <details><summary>今のホームページは作り直す必要がありますか</summary><p>ありません。採用サイトは別に立ち上げますので、今お使いのサイトには一切手を加えません。管理している制作会社と連絡が取れない場合でも問題ありません。</p></details>
+    <details><summary>写真がないのですが</summary><p>施工実績のお写真があれば十分です。現場でお撮りになったものをお送りください。足りない場合は、スマホでの撮り方をまとめた手引きをお渡しします。</p></details>
+    <details><summary>取材のために来社してもらえますか</summary><p>訪問と撮影は行っておりません。取材はすべてオンラインです。そのぶん全国どこでも同じ料金で承れます。</p></details>
+    <details><summary>社員インタビューは誰に頼めばいいですか</summary><p>入社2〜3年目の若手、中堅、ベテランの3名がそろうと、応募者の年代に届きやすくなります。難しい場合は社長お一人でも構いません。</p></details>
+    <details><summary>公開までどのくらいかかりますか</summary><p>ご発注からおよそ1か月半です。取材の日程と原稿確認のご返信で前後します。</p></details>
+    <details><summary>保守は必ず契約が必要ですか</summary><p>お願いしています。採用サイトは、募集要項や社員の入れ替わりで内容が変わります。更新されないサイトは、かえって印象を悪くするためです。</p></details>
+  </div>
+</section>
+
+<div class="cta-band" id="contact">
+  <div class="wrap narrow">
+    <h2>まずは30分、今の採用の話を聞かせてください</h2>
+    <p>その場で見積りを出すことはありません。<br>今のサイトを一緒に見て、直すと効きそうなところをお伝えします。</p>
+    <a class="btn btn-p" href="mailto:info@kensetsu-saiyo-koubou.jp?subject=採用サイトの相談">メールで相談する</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap narrow">
+    <h2><span class="num">ABOUT</span>運営者情報</h2>
+    <table class="co">
+      <tr><th>屋号</th><td>建設採用サイト工房</td></tr>
+      <tr><th>代表者</th><td>前島 秀伍</td></tr>
+      <tr><th>所在地</th><td>〒150-0041　東京都渋谷区神南1丁目11-4　FPGリンクス神南5階</td></tr>
+      <tr><th>連絡先</th><td>info@kensetsu-saiyo-koubou.jp</td></tr>
+      <tr><th>事業内容</th><td>建設会社向け採用サイトの企画・取材・制作・保守</td></tr>
+      <tr><th>対応エリア</th><td>全国（オンライン対応）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-in">
+    <div><b>建設採用サイト工房</b><br>建設会社の採用サイト専門　代表 前島 秀伍<br>東京都渋谷区神南1丁目11-4 FPGリンクス神南5階</div>
+    <div>&copy; 2026 建設採用サイト工房</div>
+  </div>
+</footer>
+
+</body>
+</html>
