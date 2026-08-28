@@ -187,12 +187,25 @@ h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 .flow p{color:var(--sub);font-size:15px;font-weight:500}
 
 /* ── who ── */
-.who{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:38px 40px}
-.who p{font-size:16px;color:var(--sub);font-weight:500;margin-bottom:20px;line-height:2}
-.who p b{color:var(--ink)}
-.who .who-note{
+.who{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:40px;display:grid;grid-template-columns:246px 1fr;gap:40px;align-items:start;
+}
+.who-photo img{
+  width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:center 18%;
+  border-radius:14px;background:var(--bg2);
+}
+.who-name{margin-top:16px;font-weight:900;font-size:19px;letter-spacing:-.01em;line-height:1.5}
+.who-name span{display:block;font-size:12.5px;font-weight:500;color:var(--mute);letter-spacing:.02em;margin-top:2px}
+.who-body p{font-size:15.8px;color:var(--sub);font-weight:500;margin-bottom:20px;line-height:2}
+.who-body p b{color:var(--ink)}
+.who-body .who-note{
   margin:0;padding:20px 24px;background:var(--tint);border-radius:12px;
-  color:var(--ink);font-weight:700;font-size:15.5px;line-height:1.85;
+  color:var(--ink);font-weight:700;font-size:15.3px;line-height:1.9;
+}
+@media(max-width:760px){
+  .who{grid-template-columns:1fr;gap:28px;padding:28px 24px}
+  .who-photo{max-width:220px;margin:0 auto;text-align:center}
 }
 
 /* ── faq ── */
@@ -317,7 +330,7 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
           <span class="tag">TYPE A</span>
           <h3>現場と数字で見せる型</h3>
           <p>現場写真を大きく使い、平均年齢・年間休日・未経験入社率といった数字を前に出します。未経験者の不安を先回りして解消する構成。職人・施工管理の募集に向いています。</p>
-          <a class="go" href="sample-a/" target="_blank" rel="noopener">サンプルを見る →</a>
+          <a class="go" href="sample-a/index.html" target="_blank" rel="noopener">サンプルを見る →</a>
         </div>
       </div>
       <div class="sample">
@@ -326,7 +339,7 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
           <span class="tag">TYPE B</span>
           <h3>会社の姿勢と人で見せる型</h3>
           <p>手がける仕事の幅と、働く人を前に出す構成。設計から施工まで一貫している会社や、複数の職種をまとめて募集したい会社に向いています。</p>
-          <a class="go" href="sample-b/" target="_blank" rel="noopener">サンプルを見る →</a>
+          <a class="go" href="sample-b/index.html" target="_blank" rel="noopener">サンプルを見る →</a>
         </div>
       </div>
     </div>
@@ -421,13 +434,19 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
   <div class="wrap narrow">
     <div class="sec-head">
       <span class="sec-no">07 &nbsp;WHO</span>
-      <h2>作るのは、<em>私一人</em>です</h2>
+      <h2>はじめまして。<br><em>前島秀伍</em>と申します</h2>
     </div>
     <div class="who">
-      <p>前職はシステムエンジニアです。上場企業のプロジェクトで金融系の大規模システムの開発に携わり、その後は<b>上場している道路舗装会社や税理士法人のサイト</b>にも関わってきました。取材も、原稿も、制作も、すべて自分で行います。</p>
-      <p>制作会社に発注すると、営業・ディレクター・デザイナー・エンジニアと人が挟まります。<b>その人件費が見積りに乗ります。</b>建設会社の採用サイトが200万、300万になるのはそのためで、逆に単価が低いと組織では採算が合わないので、真剣に取り組む会社が少なくなります。</p>
-      <p>一人で作れば、その分を<b>取材に使えます</b>。応募を左右するのは、給料・休日・どんな人が働いているかという情報で、それは現場でお話を伺わないと出てきません。ここに時間をかけるために、この形にしています。</p>
-      <p class="who-note">ご相談から納品まで、窓口は最初から最後まで私一人です。担当者が変わることはありません。</p>
+      <div class="who-photo">
+        <img src="images/maejima.png" alt="建設採用サイト工房 代表 前島秀伍" loading="lazy">
+        <div class="who-name">前島 秀伍<span>建設採用サイト工房 代表</span></div>
+      </div>
+      <div class="who-body">
+        <p>前職はシステムエンジニアです。上場企業のプロジェクトで金融系の大規模システムの開発に携わり、その後は<b>上場している道路舗装会社や税理士法人のサイト</b>にも関わってきました。</p>
+        <p>制作会社に発注すると、営業・ディレクター・デザイナー・エンジニアと人が挟まります。<b>その人件費が見積りに乗ります。</b>建設会社の採用サイトが200万、300万になるのはそのためです。逆に単価が低い仕事は組織では採算が合わないので、真剣に取り組む会社が少なくなります。</p>
+        <p>間に人を挟まなければ、その分を<b>取材に使えます</b>。応募を左右するのは、給料・休日・どんな人が働いているかという情報で、それはお話を伺わないと出てきません。ここに時間をかけるために、この形にしています。</p>
+        <p class="who-note">「あの話、担当が代わって伝わっていない」ということが起きません。<br>ご相談から納品後の更新まで、窓口は最初から最後まで同じです。</p>
+      </div>
     </div>
   </div>
 </section>
