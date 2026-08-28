@@ -105,25 +105,58 @@ h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 }
 .verdict em{font-style:normal;color:#ff8a94}
 
-/* ── pages ── */
-.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
-.pg{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
-.pg .n{
-  display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
-  border-radius:10px;background:var(--ac);color:#fff;font-weight:900;font-size:14px;margin-bottom:16px;
+/* ── pages（横一列の行） ── */
+.pages{
+  display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
 }
-.pg p{font-size:14.3px;color:var(--sub);font-weight:500;line-height:1.8}
+.pg{
+  background:#fff;padding:22px 28px;display:grid;
+  grid-template-columns:40px 190px 1fr;gap:20px;align-items:center;
+}
+.pg .n{
+  display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  border-radius:11px;background:var(--ac);color:#fff;font-weight:900;font-size:14px;
+}
+.pg h3{margin-bottom:0;font-size:17px}
+.pg p{font-size:14.8px;color:var(--sub);font-weight:500;line-height:1.8}
 
-/* ── samples ── */
-.samples{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+/* オプション価格 */
+.opt-price{
+  display:inline-block;margin-left:12px;background:var(--ac);color:#fff;
+  font-size:13px;font-weight:900;padding:6px 16px;border-radius:999px;
+  vertical-align:middle;letter-spacing:.01em;
+}
+
+/* ── 追加ページ ── */
+.opt{
+  margin-top:32px;background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:32px 34px;
+}
+.opt-head h3{font-size:17.5px;margin-bottom:10px}
+.opt-head p{font-size:14.8px;color:var(--sub);font-weight:500;line-height:1.9;margin-bottom:22px}
+.opt-tags{display:flex;flex-wrap:wrap;gap:9px}
+.opt-tags span{
+  border:1px solid var(--line);background:var(--bg2);color:var(--ink);
+  font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:999px;
+}
+
+/* ── samples（縦積み・対等） ── */
+.samples{display:grid;grid-template-columns:1fr;gap:28px}
 .sample{
   background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
-  transition:.25s;
+  transition:.25s;display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch;
 }
-.sample:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,22,25,.10)}
-.sample .thumb{aspect-ratio:16/10;overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--line)}
+.sample:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(20,22,25,.12)}
+.sample .thumb{
+  display:block;overflow:hidden;background:var(--bg2);
+  border-right:1px solid var(--line);min-height:100%;
+}
 .sample .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
-.sample .body{padding:28px 28px 32px}
+.sample .body{
+  padding:36px 38px;display:flex;flex-direction:column;justify-content:center;
+  align-items:flex-start;
+}
 .sample .tag{
   display:inline-block;background:var(--tint);color:var(--ac);font-size:11.5px;font-weight:900;
   letter-spacing:.12em;padding:5px 14px;border-radius:999px;margin-bottom:14px;
@@ -132,6 +165,42 @@ h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 .sample .go{
   display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;
   text-decoration:none;color:var(--ink);border-bottom:2px solid var(--ac);padding-bottom:3px;
+}
+
+/* ── one sample ── */
+.onesample{display:grid;grid-template-columns:1.15fr 1fr;gap:38px;align-items:center}
+.shot{
+  display:block;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  box-shadow:0 14px 40px rgba(20,22,25,.10);transition:.25s;background:#fff;
+}
+.shot:hover{transform:translateY(-4px);box-shadow:0 22px 54px rgba(20,22,25,.16)}
+.shot img{width:100%;display:block}
+.onesample-body h3{font-size:21px;margin-bottom:14px}
+.onesample-body p{font-size:15.5px;color:var(--sub);font-weight:500;line-height:1.95;margin-bottom:22px}
+.chk{list-style:none;margin-bottom:28px}
+.chk li{position:relative;padding-left:28px;margin-bottom:11px;font-size:15px;font-weight:500}
+.chk li::before{
+  content:"";position:absolute;left:3px;top:11px;width:12px;height:6px;
+  border-left:2.5px solid var(--ac);border-bottom:2.5px solid var(--ac);transform:rotate(-45deg);
+}
+/* 副サンプル */
+.alt-sample{
+  margin-top:44px;padding-top:44px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:center;
+}
+.alt-thumb{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.25s}
+.alt-thumb:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(20,22,25,.10)}
+.alt-thumb img{width:100%;display:block}
+.alt-tag{
+  display:inline-block;background:var(--bg2);color:var(--mute);font-size:11.5px;font-weight:900;
+  letter-spacing:.1em;padding:5px 14px;border-radius:999px;margin-bottom:12px;
+}
+.alt-body h3{font-size:18.5px;margin-bottom:10px}
+.alt-body p{font-size:14.8px;color:var(--sub);font-weight:500;line-height:1.9;margin-bottom:18px}
+
+@media(max-width:760px){
+  .onesample{grid-template-columns:1fr;gap:26px}
+  .alt-sample{grid-template-columns:1fr;gap:20px;margin-top:34px;padding-top:34px}
 }
 
 /* ── core table ── */
@@ -172,6 +241,11 @@ h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 .cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:none}
 
 /* ── flow ── */
+.flow h3 .t{
+  display:inline-block;margin-left:10px;background:var(--tint);color:var(--ac);
+  font-size:11.5px;font-weight:700;letter-spacing:.03em;padding:4px 12px;
+  border-radius:999px;vertical-align:middle;
+}
 .flow{list-style:none;counter-reset:f}
 .flow li{
   counter-increment:f;position:relative;padding:0 0 34px 74px;
@@ -185,6 +259,21 @@ h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
   box-shadow:0 6px 16px rgba(255,77,90,.28);
 }
 .flow p{color:var(--sub);font-size:15px;font-weight:500}
+
+/* ── 体制 ── */
+.roles{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;margin-bottom:34px;
+}
+.role{background:#fff;padding:24px 22px}
+.role b{display:block;font-size:15.5px;font-weight:900;margin-bottom:8px}
+.role span{font-size:13.5px;color:var(--sub);font-weight:500;line-height:1.8}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.creds span{
+  background:var(--tint);color:var(--ac);font-size:12.5px;font-weight:700;
+  padding:6px 14px;border-radius:999px;
+}
 
 /* ── who ── */
 .who{
@@ -243,11 +332,18 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
 @media(max-width:760px){
   section{padding:64px 0}
   .hero{padding:48px 0 64px}
-  .samples{grid-template-columns:1fr}
+  .sample{grid-template-columns:1fr}
+  .sample .thumb{border-right:none;border-bottom:1px solid var(--line);aspect-ratio:16/10}
+  .sample .body{padding:26px 24px 30px}
   .core .row{grid-template-columns:1fr}
   .core .row>div:last-child{border-left:none;border-top:1px solid var(--line);padding-top:0}
   .core .row:first-child{display:none}
   .cmp tbody th{width:34%}
+  .roles{grid-template-columns:repeat(2,1fr)}
+  .pg{grid-template-columns:34px 1fr;gap:14px;padding:20px 22px}
+  .pg p{grid-column:2}
+  .opt-price{display:block;margin:12px 0 0}
+  .flow h3 .t{display:block;margin:8px 0 0}
   .pill.lg{font-size:15.5px;padding:16px 30px}
 }
 </style>
@@ -312,6 +408,23 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
       <div class="pg"><span class="n">4</span><h3>募集要項</h3><p>給与、休日、待遇、福利厚生、選考フロー、よくある質問。</p></div>
       <div class="pg"><span class="n">5</span><h3>応募フォーム</h3><p>スマホから数分で送れる窓口。カジュアル面談の導線も。</p></div>
     </div>
+
+    <div class="opt">
+      <div class="opt-head">
+        <h3>この5ページで、応募に必要な情報はひと通り入ります。<span class="opt-price">追加ページは1ページ ＋10万円</span></h3>
+        <p>そのうえで、御社の事情に応じて次のようなページも追加できます。何が必要かはご相談のうえ決めますので、この場でお選びいただく必要はありません。</p>
+      </div>
+      <div class="opt-tags">
+        <span>施工実績・事業紹介</span>
+        <span>代表メッセージ</span>
+        <span>研修・資格取得支援</span>
+        <span>若手社員の座談会</span>
+        <span>職種別の募集ページ</span>
+        <span>お知らせ・現場ブログ</span>
+        <span>数字で見る会社</span>
+        <span>会社概要・アクセス</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -320,25 +433,29 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-no">03 &nbsp;SAMPLE</span>
-      <h2><em>2つの型</em>から選べます</h2>
-      <p class="lead">ゼロからデザインを起こすのではなく、建設会社向けに設計した2つの型をご用意しています。募集職種と社風に合う方をお選びいただき、中身を御社の取材内容に差し替えてお作りします。だからこの価格で、この期間で仕上がります。</p>
+      <h2>実際に、<em>こういうサイト</em>をお作りします</h2>
+      <p class="lead">架空の建設会社を想定してお作りしたサンプルです。実際にページを開いて中身をご覧いただけます。御社の場合は、ここに入っている数字・写真・社員の声が、すべて御社の取材内容に置き換わります。合う方をご相談のうえ決めます。</p>
     </div>
     <div class="samples">
       <div class="sample">
-        <div class="thumb"><img src="images/sample-a.jpg" alt="TYPE A 現場と数字で見せる採用サイトのサンプル" loading="lazy"></div>
+        <a class="thumb" href="sample-a/index.html" target="_blank" rel="noopener">
+          <img src="images/sample-a.jpg" alt="現場と数字で見せる採用サイトのサンプル" loading="lazy">
+        </a>
         <div class="body">
           <span class="tag">TYPE A</span>
           <h3>現場と数字で見せる型</h3>
-          <p>現場写真を大きく使い、平均年齢・年間休日・未経験入社率といった数字を前に出します。未経験者の不安を先回りして解消する構成。職人・施工管理の募集に向いています。</p>
+          <p>現場写真を大きく使い、平均年齢・年間休日・未経験入社率といった数字を前に出します。未経験者の不安に先回りして答える構成で、職人・施工管理の募集に向いています。</p>
           <a class="go" href="sample-a/index.html" target="_blank" rel="noopener">サンプルを見る →</a>
         </div>
       </div>
       <div class="sample">
-        <div class="thumb"><img src="images/sample-b.jpg" alt="TYPE B 会社の姿勢と人で見せる採用サイトのサンプル" loading="lazy"></div>
+        <a class="thumb" href="sample-b/index.html" target="_blank" rel="noopener">
+          <img src="images/sample-b.jpg" alt="会社の姿勢と人を前に出す採用サイトのサンプル" loading="lazy">
+        </a>
         <div class="body">
           <span class="tag">TYPE B</span>
-          <h3>会社の姿勢と人で見せる型</h3>
-          <p>手がける仕事の幅と、働く人を前に出す構成。設計から施工まで一貫している会社や、複数の職種をまとめて募集したい会社に向いています。</p>
+          <h3>会社の姿勢と、人を前に出す型</h3>
+          <p>手がける仕事の幅と、働いている人を大きく見せる構成です。設計から施工まで一貫している会社や、複数の職種をまとめて募集したい会社に向いています。</p>
           <a class="go" href="sample-b/index.html" target="_blank" rel="noopener">サンプルを見る →</a>
         </div>
       </div>
@@ -363,7 +480,6 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
       <div class="row"><div>資格取得の支援があるか</div><div>ヒアリング</div></div>
       <div class="row"><div>寮・車貸与の有無</div><div>ヒアリング</div></div>
     </div>
-    <p class="lead" style="margin-top:30px">写真は御社にある施工実績のものをそのまま使います。足りなければ、スマホでの撮り方をまとめた手引きをお渡しします。<b>撮影のための訪問はしません。</b>だから全国どこでも、同じ料金で承れます。</p>
   </div>
 </section>
 
@@ -417,14 +533,16 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
     <div class="sec-head">
       <span class="sec-no">06 &nbsp;FLOW</span>
       <h2>進め方</h2>
-      <p class="lead">ご相談から公開まで、およそ1か月半。すべてオンラインで完結します。</p>
+      <p class="lead">ご相談から公開まで、およそ1か月半。すべてオンラインで完結します。<b>御社にご負担いただくのは、下記3〜5のお時間だけです。</b></p>
     </div>
     <ol class="flow">
-      <li><h3>ご相談（30分・オンライン）</h3><p>今の採用の状況と、募集したい職種をお聞きします。無理にお勧めすることはありません。</p></li>
-      <li><h3>お見積り・型のご提案</h3><p>2つの型のどちらが合うかをご提案します。ここまで費用はかかりません。</p></li>
-      <li><h3>取材（2〜3回・各1時間）</h3><p>社長と、可能であれば社員の方2〜3名にお話を伺います。オンラインで結構です。</p></li>
-      <li><h3>原稿のご確認</h3><p>こちらで書いた原稿をご確認いただきます。事実と違うところを直してください。</p></li>
-      <li><h3>制作・公開</h3><p>サーバーの設定まで行い、公開します。以降は保守で更新に対応します。</p></li>
+      <li><h3>ご相談<span class="t">30分・オンライン</span></h3><p>今の採用の状況と、募集したい職種をお聞きします。無理にお勧めすることはありません。</p></li>
+      <li><h3>お見積り・型のご提案<span class="t">費用はかかりません</span></h3><p>2つの型のどちらが合うかをご提案します。ここまでは無料です。</p></li>
+      <li><h3>社長ヒアリング<span class="t">1時間・オンライン</span></h3><p>事業内容、募集の背景、給与や休日、資格取得の支援、今後の方針。サイトの中身になる部分を伺います。</p></li>
+      <li><h3>社員インタビュー<span class="t">2〜3名・各30〜45分</span></h3><p>若手・中堅・ベテランの方にお話を伺います。前職、入社理由、大変だったこと、今の目標。難しければ社長お一人でも構いません。</p></li>
+      <li><h3>写真のご提供<span class="t">データを送るだけ</span></h3><p>施工実績・現場・社員の写真を、お手元にあるものからお送りください。撮り直しは不要です。足りない場合はスマホでの撮り方をお渡しします。</p></li>
+      <li><h3>原稿のご確認</h3><p>こちらで書いた原稿をご確認いただきます。事実と違うところだけ直してください。</p></li>
+      <li><h3>制作・公開</h3><p>デザイン・実装からサーバーの設定まで行い、公開します。以降は保守で更新に対応します。</p></li>
     </ol>
   </div>
 </section>
@@ -433,19 +551,33 @@ footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6
 <section>
   <div class="wrap narrow">
     <div class="sec-head">
-      <span class="sec-no">07 &nbsp;WHO</span>
-      <h2>はじめまして。<br><em>前島秀伍</em>と申します</h2>
+      <span class="sec-no">07 &nbsp;TEAM</span>
+      <h2>取材から公開後の運用まで、<br><em>一貫した体制</em>でお引き受けします</h2>
+      <p class="lead">建設会社の採用サイトだけを手がけています。案件の内容に応じて、デザイナー・カメラマン・ライターと制作チームを編成し、必要な体制を組んでお引き受けします。</p>
     </div>
+
+    <div class="roles">
+      <div class="role"><b>取材・企画</b><span>社長と社員の方へのヒアリング、構成の設計</span></div>
+      <div class="role"><b>原稿・ライティング</b><span>伺った話を、応募者に届く言葉に整えます</span></div>
+      <div class="role"><b>デザイン</b><span>建設業の採用に合わせた画面設計</span></div>
+      <div class="role"><b>実装・公開</b><span>スマホ対応、サーバー設定、公開まで</span></div>
+      <div class="role"><b>公開後の運用</b><span>募集要項の変更、社員の入れ替わりに対応</span></div>
+    </div>
+
     <div class="who">
       <div class="who-photo">
         <img src="images/maejima.png" alt="建設採用サイト工房 代表 前島秀伍" loading="lazy">
         <div class="who-name">前島 秀伍<span>建設採用サイト工房 代表</span></div>
       </div>
       <div class="who-body">
-        <p>前職はシステムエンジニアです。上場企業のプロジェクトで金融系の大規模システムの開発に携わり、その後は<b>上場している道路舗装会社や税理士法人のサイト</b>にも関わってきました。</p>
-        <p>制作会社に発注すると、営業・ディレクター・デザイナー・エンジニアと人が挟まります。<b>その人件費が見積りに乗ります。</b>建設会社の採用サイトが200万、300万になるのはそのためです。逆に単価が低い仕事は組織では採算が合わないので、真剣に取り組む会社が少なくなります。</p>
-        <p>間に人を挟まなければ、その分を<b>取材に使えます</b>。応募を左右するのは、給料・休日・どんな人が働いているかという情報で、それはお話を伺わないと出てきません。ここに時間をかけるために、この形にしています。</p>
-        <p class="who-note">「あの話、担当が代わって伝わっていない」ということが起きません。<br>ご相談から納品後の更新まで、窓口は最初から最後まで同じです。</p>
+        <div class="creds">
+          <span>上場企業の金融システム開発</span>
+          <span>上場建設会社のサイト制作</span>
+          <span>取材から制作まで一貫</span>
+        </div>
+        <p>システムエンジニアとして、上場企業のプロジェクトで金融系の大規模システムの開発に携わってきました。その後は<b>上場している道路舗装会社や税理士法人のサイト</b>にも関わっています。</p>
+        <p>建設業の採用サイトは、デザインの巧拙ではなく<b>中身で決まります</b>。給料、休日、資格の支援、どんな人が働いているのか。応募者が見ているのはそこで、その情報は社内にあっても言葉になっていないことがほとんどです。<b>それを引き出して、載る形に整えるところ</b>に時間をかけています。</p>
+        <p class="who-note">ご相談から納品後の更新まで、窓口は一貫して代表が担当します。<br>「前にお話ししたことが、担当が代わって伝わっていない」ということが起きません。</p>
       </div>
     </div>
   </div>
