@@ -5,272 +5,360 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>建設採用サイト工房｜建設会社の採用サイト専門</title>
 <meta name="description" content="建設会社の採用サイトだけを作っています。取材から原稿まで一式で50万円。全国オンライン対応、撮影のための訪問はありません。">
+<meta property="og:title" content="建設採用サイト工房｜建設会社の採用サイト専門">
+<meta property="og:description" content="求人にお金をかけても応募が来ない会社へ。取材・原稿・制作まで一式50万円。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#12233a; --ink:#1a1a1a; --sub:#5a6472;
-    --accent:#c8471f; --line:#e2e5ea; --bg:#ffffff; --bg2:#f5f7fa;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;
-    color:var(--ink); background:var(--bg); line-height:1.85;
-    font-size:16px; -webkit-text-size-adjust:100%;
-  }
-  img{max-width:100%;display:block}
-  a{color:inherit}
-  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
-  .narrow{max-width:760px}
+:root{
+  --ac:#ff4d5a;          /* アクセント */
+  --ac-d:#e8384a;
+  --tint:#fff5f6;        /* 極薄アクセント面 */
+  --tint2:#ffe6e9;
+  --ink:#1a1a1a;
+  --sub:#5b626d;
+  --mute:#8b929c;
+  --line:#ececec;
+  --bg2:#fafafa;
+  --dark:#141619;
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans JP",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  color:var(--ink);background:#fff;line-height:1.9;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.narrow{max-width:800px}
 
-  /* header */
-  header{
-    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
-    border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(6px);
-  }
-  .hd{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .logo{font-weight:700;font-size:17px;letter-spacing:.02em;text-decoration:none}
-  .logo small{display:block;font-size:11px;font-weight:400;color:var(--sub);letter-spacing:.08em}
-  .hd a.cta{
-    background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;
-    padding:10px 20px;border-radius:4px;white-space:nowrap;
-  }
+/* ── header ── */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(10px)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{text-decoration:none;font-weight:900;font-size:18px;letter-spacing:-.01em;line-height:1.3}
+.logo em{font-style:normal;color:var(--ac)}
+.logo small{display:block;font-size:10.5px;font-weight:500;color:var(--mute);letter-spacing:.1em}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#fff;
+  text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 24px;border-radius:999px;
+  box-shadow:0 6px 18px rgba(255,77,90,.28);transition:.2s;
+}
+.pill:hover{background:var(--ac-d);transform:translateY(-1px)}
+.pill.lg{font-size:16.5px;padding:18px 40px}
+.pill.gh{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
 
-  /* hero */
-  .hero{background:var(--navy);color:#fff;padding:88px 0 76px}
-  .hero .eyebrow{
-    color:#ffb59b;font-size:13px;font-weight:700;letter-spacing:.14em;margin-bottom:20px;
-  }
-  .hero h1{
-    font-size:clamp(28px,5.2vw,46px);line-height:1.45;font-weight:700;letter-spacing:.01em;
-    margin-bottom:28px;
-  }
-  .hero p{font-size:17px;color:#c9d3e0;max-width:640px}
-  .hero .btns{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
-  .btn{
-    display:inline-block;text-decoration:none;font-weight:700;font-size:15px;
-    padding:15px 30px;border-radius:4px;
-  }
-  .btn-p{background:var(--accent);color:#fff}
-  .btn-g{border:1px solid rgba(255,255,255,.45);color:#fff}
+/* ── hero ── */
+.hero{position:relative;overflow:hidden;padding:70px 0 90px}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(900px 480px at 88% -8%, var(--tint2) 0%, rgba(255,230,233,0) 62%),
+    radial-gradient(680px 420px at 4% 108%, var(--tint) 0%, rgba(255,245,246,0) 60%);
+}
+.badge{
+  display:inline-block;background:#fff;border:1.5px solid var(--tint2);color:var(--ac);
+  font-size:13px;font-weight:700;letter-spacing:.06em;padding:7px 18px;border-radius:999px;margin-bottom:26px;
+}
+.hero h1{
+  font-size:clamp(32px,6.2vw,62px);font-weight:900;line-height:1.34;letter-spacing:-.02em;
+  margin-bottom:26px;
+}
+.hero h1 em{font-style:normal;color:var(--ac)}
+.hero .sub{font-size:clamp(16px,2.1vw,19px);color:var(--sub);max-width:660px;font-weight:500}
+.hero .btns{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+.stats{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
+.stat b{display:block;font-size:22px;font-weight:900;letter-spacing:-.01em}
+.stat b i{font-style:normal;color:var(--ac)}
+.stat span{font-size:13.5px;color:var(--mute);font-weight:500}
 
-  /* sections */
-  section{padding:80px 0}
-  .alt{background:var(--bg2)}
-  h2{
-    font-size:clamp(21px,3.4vw,29px);line-height:1.5;font-weight:700;
-    letter-spacing:.01em;margin-bottom:14px;
-  }
-  h2 .num{color:var(--accent);font-size:13px;display:block;letter-spacing:.14em;margin-bottom:10px}
-  .lead{color:var(--sub);font-size:16px;margin-bottom:40px;max-width:720px}
-  h3{font-size:18px;font-weight:700;margin-bottom:8px}
+/* ── sections ── */
+section{padding:96px 0}
+.alt{background:var(--bg2)}
+.tint{background:var(--tint)}
+.sec-head{margin-bottom:52px}
+.sec-no{
+  display:inline-block;font-size:12.5px;font-weight:900;letter-spacing:.16em;color:var(--ac);
+  margin-bottom:14px;
+}
+h2{font-size:clamp(24px,4.1vw,38px);font-weight:900;line-height:1.45;letter-spacing:-.02em}
+h2 em{font-style:normal;color:var(--ac)}
+.lead{margin-top:18px;color:var(--sub);font-size:16.5px;max-width:740px;font-weight:500}
+h3{font-size:18.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 
-  /* problem list */
-  .prob{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-  .prob div{background:#fff;padding:22px 24px}
-  .prob b{color:var(--navy);display:block;font-size:17px;margin-bottom:4px}
-  .prob span{color:var(--sub);font-size:15px}
+/* ── problem ── */
+.probs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.prob{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;position:relative}
+.prob .x{
+  width:34px;height:34px;border-radius:50%;background:var(--tint);color:var(--ac);
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin-bottom:16px;
+}
+.prob p{font-size:14.8px;color:var(--sub);font-weight:500;line-height:1.85}
+.verdict{
+  margin-top:34px;background:var(--dark);color:#fff;border-radius:var(--r);
+  padding:34px 36px;font-size:clamp(17px,2.6vw,22px);font-weight:700;line-height:1.75;
+}
+.verdict em{font-style:normal;color:#ff8a94}
 
-  /* pages */
-  .pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-  .page{border:1px solid var(--line);border-radius:6px;padding:22px;background:#fff}
-  .page .n{
-    display:inline-block;background:var(--navy);color:#fff;font-size:12px;font-weight:700;
-    width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;margin-bottom:12px;
-  }
-  .page p{font-size:14.5px;color:var(--sub)}
+/* ── pages ── */
+.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.pg{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
+.pg .n{
+  display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border-radius:10px;background:var(--ac);color:#fff;font-weight:900;font-size:14px;margin-bottom:16px;
+}
+.pg p{font-size:14.3px;color:var(--sub);font-weight:500;line-height:1.8}
 
-  /* samples */
-  .samples{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .sample{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
-  .sample .thumb{aspect-ratio:16/10;background:var(--navy);position:relative;overflow:hidden}
-  .sample .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
-  .sample .body{padding:22px 24px 26px}
-  .sample .tag{
-    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;
-    color:var(--accent);margin-bottom:8px;
-  }
-  .sample p{font-size:14.5px;color:var(--sub);margin-bottom:16px}
-  .sample a{
-    display:inline-block;font-weight:700;font-size:14px;text-decoration:none;
-    border:1px solid var(--navy);color:var(--navy);padding:10px 22px;border-radius:4px;
-  }
+/* ── samples ── */
+.samples{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.sample{
+  background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:.25s;
+}
+.sample:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,22,25,.10)}
+.sample .thumb{aspect-ratio:16/10;overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--line)}
+.sample .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sample .body{padding:28px 28px 32px}
+.sample .tag{
+  display:inline-block;background:var(--tint);color:var(--ac);font-size:11.5px;font-weight:900;
+  letter-spacing:.12em;padding:5px 14px;border-radius:999px;margin-bottom:14px;
+}
+.sample p{font-size:14.6px;color:var(--sub);font-weight:500;margin-bottom:22px;line-height:1.85}
+.sample .go{
+  display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;
+  text-decoration:none;color:var(--ink);border-bottom:2px solid var(--ac);padding-bottom:3px;
+}
 
-  /* price */
-  .price{border:2px solid var(--navy);border-radius:8px;overflow:hidden;background:#fff}
-  .price .top{background:var(--navy);color:#fff;padding:22px 28px}
-  .price .top b{font-size:17px}
-  .price .amount{padding:30px 28px;border-bottom:1px solid var(--line)}
-  .price .amount .yen{font-size:clamp(34px,6vw,50px);font-weight:700;letter-spacing:-.01em;line-height:1.2}
-  .price .amount .yen small{font-size:18px;font-weight:700;margin-left:4px}
-  .price .amount .note{color:var(--sub);font-size:14.5px;margin-top:8px}
-  .price ul{list-style:none;padding:26px 28px}
-  .price li{padding-left:26px;position:relative;margin-bottom:11px;font-size:15.5px}
-  .price li::before{
-    content:"";position:absolute;left:2px;top:11px;width:12px;height:6px;
-    border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg);
-  }
-  .price .foot{background:var(--bg2);padding:20px 28px;font-size:14.5px;color:var(--sub)}
+/* ── core table ── */
+.core{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.core .row{display:grid;grid-template-columns:1fr 260px;border-top:1px solid var(--line)}
+.core .row:first-child{border-top:none;background:var(--dark);color:#fff;font-weight:700}
+.core .row>div{padding:17px 24px;font-size:15.5px}
+.core .row>div:last-child{border-left:1px solid var(--line);color:var(--sub);font-weight:500}
+.core .row:first-child>div:last-child{border-left-color:rgba(255,255,255,.15);color:#fff}
 
-  /* compare */
-  .cmp{width:100%;border-collapse:collapse;font-size:15.5px;background:#fff}
-  .cmp th,.cmp td{border:1px solid var(--line);padding:15px 16px;text-align:left;vertical-align:top}
-  .cmp thead th{background:var(--navy);color:#fff;font-weight:700}
-  .cmp tbody th{background:var(--bg2);font-weight:700;width:30%}
-  .cmp .good{color:var(--navy);font-weight:700}
+/* ── price ── */
+.pricebox{background:#fff;border:2px solid var(--ink);border-radius:20px;overflow:hidden}
+.pricebox .hdr{background:var(--ink);color:#fff;padding:20px 32px;font-weight:900;font-size:17px}
+.pricebox .amt{padding:38px 32px 34px;text-align:center;border-bottom:1px solid var(--line)}
+.pricebox .amt .y{font-size:clamp(46px,9vw,76px);font-weight:900;line-height:1;letter-spacing:-.03em}
+.pricebox .amt .y small{font-size:24px;margin-left:6px}
+.pricebox .amt .tax{display:block;font-size:14px;color:var(--mute);font-weight:500;margin-top:12px}
+.pricebox .amt .keep{
+  display:inline-block;margin-top:18px;background:var(--tint);color:var(--ac);
+  font-weight:700;font-size:14.5px;padding:9px 22px;border-radius:999px;
+}
+.pricebox ul{list-style:none;padding:30px 32px}
+.pricebox li{position:relative;padding-left:30px;margin-bottom:13px;font-size:15.5px;font-weight:500}
+.pricebox li::before{
+  content:"";position:absolute;left:4px;top:12px;width:13px;height:7px;
+  border-left:2.5px solid var(--ac);border-bottom:2.5px solid var(--ac);transform:rotate(-45deg);
+}
+.pricebox .foot{background:var(--bg2);padding:24px 32px;font-size:14.5px;color:var(--sub);font-weight:500}
 
-  /* flow */
-  .flow{counter-reset:s;list-style:none}
-  .flow li{
-    counter-increment:s;position:relative;padding:0 0 30px 62px;border-left:2px solid var(--line);
-    margin-left:19px;
-  }
-  .flow li:last-child{border-left-color:transparent;padding-bottom:0}
-  .flow li::before{
-    content:counter(s);position:absolute;left:-20px;top:-2px;width:38px;height:38px;
-    background:var(--navy);color:#fff;border-radius:50%;font-weight:700;font-size:15px;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .flow p{color:var(--sub);font-size:15px}
+/* ── compare ── */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:15.3px;margin-top:52px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line)}
+.cmp thead th{background:var(--dark);color:#fff;font-weight:700;font-size:14.5px}
+.cmp thead th:last-child{background:var(--ac)}
+.cmp tbody th{font-weight:700;width:26%;color:var(--sub);font-size:14.5px}
+.cmp td:last-child{font-weight:700}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:none}
 
-  /* faq */
-  details{border-bottom:1px solid var(--line);padding:18px 0}
-  details summary{
-    font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;
-    padding-right:32px;position:relative;
-  }
-  details summary::-webkit-details-marker{display:none}
-  details summary::after{
-    content:"＋";position:absolute;right:4px;top:0;color:var(--accent);font-weight:700;
-  }
-  details[open] summary::after{content:"−"}
-  details p{color:var(--sub);font-size:15px;margin-top:12px}
+/* ── flow ── */
+.flow{list-style:none;counter-reset:f}
+.flow li{
+  counter-increment:f;position:relative;padding:0 0 34px 74px;
+  border-left:2px solid var(--line);margin-left:21px;
+}
+.flow li:last-child{border-left-color:transparent;padding-bottom:0}
+.flow li::before{
+  content:"0" counter(f);position:absolute;left:-22px;top:-4px;width:44px;height:44px;
+  background:var(--ac);color:#fff;border-radius:14px;font-weight:900;font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 16px rgba(255,77,90,.28);
+}
+.flow p{color:var(--sub);font-size:15px;font-weight:500}
 
-  /* cta */
-  .cta-band{background:var(--navy);color:#fff;text-align:center;padding:76px 0}
-  .cta-band h2{color:#fff}
-  .cta-band p{color:#c9d3e0;margin-bottom:32px}
+/* ── faq ── */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-bottom:12px}
+details summary{
+  font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;position:relative;padding-right:36px;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"＋";position:absolute;right:0;top:-1px;color:var(--ac);font-weight:900;font-size:19px;
+}
+details[open] summary::after{content:"−"}
+details p{color:var(--sub);font-size:15px;font-weight:500;margin-top:14px}
 
-  /* company */
-  .co{width:100%;border-collapse:collapse;font-size:15.5px}
-  .co th,.co td{border-bottom:1px solid var(--line);padding:15px 4px;text-align:left;vertical-align:top}
-  .co th{width:30%;font-weight:700;color:var(--navy)}
+/* ── cta ── */
+.cta{background:var(--dark);color:#fff;text-align:center;padding:96px 0;position:relative;overflow:hidden}
+.cta::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(700px 340px at 50% -12%, rgba(255,77,90,.32) 0%, rgba(255,77,90,0) 68%);
+}
+.cta>*{position:relative}
+.cta h2{color:#fff}
+.cta p{color:#a9b0ba;margin:20px 0 36px;font-weight:500}
 
-  footer{background:var(--navy);color:#8fa3bb;padding:36px 0;font-size:13.5px}
-  .footer-in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  footer b{color:#fff;font-size:15px}
+/* ── about ── */
+.about{width:100%;border-collapse:collapse;font-size:15.3px}
+.about th,.about td{border-bottom:1px solid var(--line);padding:17px 4px;text-align:left;vertical-align:top}
+.about th{width:28%;font-weight:700;color:var(--mute);font-size:14.5px}
+.about td{font-weight:500}
 
-  @media(max-width:720px){
-    section{padding:58px 0}
-    .hero{padding:60px 0 54px}
-    .samples{grid-template-columns:1fr}
-    .hd a.cta{padding:9px 14px;font-size:13px}
-    .cmp tbody th{width:36%}
-  }
+footer{background:var(--dark);color:#7c848f;padding:44px 0;font-size:13.5px}
+.fin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:6px}
+
+@media(max-width:760px){
+  section{padding:64px 0}
+  .hero{padding:48px 0 64px}
+  .samples{grid-template-columns:1fr}
+  .core .row{grid-template-columns:1fr}
+  .core .row>div:last-child{border-left:none;border-top:1px solid var(--line);padding-top:0}
+  .core .row:first-child{display:none}
+  .cmp tbody th{width:34%}
+  .pill.lg{font-size:15.5px;padding:16px 30px}
+}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap hd">
-    <a class="logo" href="#top">建設採用サイト工房<small>建設会社の採用サイト専門</small></a>
-    <a class="cta" href="#contact">相談する</a>
+    <a class="logo" href="#top">建設<em>採用サイト</em>工房<small>建設会社の採用サイト専門</small></a>
+    <a class="pill" href="#contact">無料で相談する</a>
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero" id="top">
   <div class="wrap">
-    <p class="eyebrow">建設会社の採用サイト専門</p>
-    <h1>求人にお金をかけても、<br>応募が来ない会社へ。</h1>
-    <p>応募を決めているのは求人票ではなく、そのあとに見られる<b style="color:#fff">御社のサイト</b>です。建設会社の採用サイトだけを作っています。取材・原稿・制作まで一式で50万円。全国どこでもオンラインで対応します。</p>
+    <span class="badge">建設会社の採用サイト専門</span>
+    <h1>求人にお金をかけても、<br><em>応募が来ない</em>会社へ。</h1>
+    <p class="sub">応募を決めているのは求人票ではなく、そのあとに検索して見られる御社のサイトです。建設会社の採用サイトだけを作っています。取材・原稿・制作まで一式で50万円。</p>
     <div class="btns">
-      <a class="btn btn-p" href="#samples">制作したサイトを見る</a>
-      <a class="btn btn-g" href="#price">料金を見る</a>
+      <a class="pill lg" href="#samples">制作したサイトを見る →</a>
+      <a class="pill lg gh" href="#price">料金を見る</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b><i>50</i>万円</b><span>取材・原稿込み、追加費用なし</span></div>
+      <div class="stat"><b><i>全国</i>対応</b><span>オンライン完結。訪問しません</span></div>
+      <div class="stat"><b>約<i>1.5</i>か月</b><span>ご発注から公開まで</span></div>
     </div>
   </div>
 </div>
 
+<!-- 01 課題 -->
 <section>
   <div class="wrap">
-    <h2><span class="num">WHY</span>求人媒体に出しても、そこで終わっていませんか</h2>
-    <p class="lead">応募を検討している人は、必ず社名を検索します。そこで出てくるページが次のような状態だと、そこで離脱します。媒体に払った掲載料は、その一瞬で無駄になります。</p>
-    <div class="prob">
-      <div><b>採用ページが数百字しかない</b><span>年間休日120日、賞与年3回といった良い条件を出していても、サイトに書かれていなければ伝わりません。</span></div>
-      <div><b>社員の顔と声がない</b><span>どんな人が働いているか分からない会社に、20代は応募しません。給与や休日と同じくらい見られています。</span></div>
-      <div><b>現場の写真がない</b><span>何をする仕事なのかが想像できません。未経験者ほどここで判断します。</span></div>
-      <div><b>サイトの更新が10年以上止まっている</b><span>「この会社、大丈夫だろうか」と受け取られます。事業が順調でも、そう見えません。</span></div>
+    <div class="sec-head">
+      <span class="sec-no">01 &nbsp;PROBLEM</span>
+      <h2>掲載料を払っているのに、<br><em>応募が来ない</em>理由</h2>
+      <p class="lead">求人媒体を見た人は、必ず社名を検索します。そこで出てくるページが次の状態だと、その時点で離脱します。媒体に払った掲載料は、その一瞬で無駄になります。</p>
     </div>
+    <div class="probs">
+      <div class="prob"><div class="x">×</div><h3>採用ページが数百字しかない</h3><p>年間休日120日、賞与年3回。条件が良くても、サイトに書かれていなければ伝わりません。</p></div>
+      <div class="prob"><div class="x">×</div><h3>社員の顔と声がない</h3><p>誰が働いているか分からない会社に、20代は応募しません。給与や休日と同じくらい見られています。</p></div>
+      <div class="prob"><div class="x">×</div><h3>現場の写真がない</h3><p>何をする仕事なのか想像できません。未経験の応募者ほど、ここで判断しています。</p></div>
+      <div class="prob"><div class="x">×</div><h3>更新が10年止まっている</h3><p>「この会社、大丈夫だろうか」と受け取られます。事業が順調でも、そうは見えません。</p></div>
+    </div>
+    <div class="verdict">応募者が見ているのは、<em>デザインの良し悪しではありません。</em><br>給料はいくらか、休みは取れるのか、どんな人が働いているのか。<br>その答えが書かれているかどうか、それだけです。</div>
   </div>
 </section>
 
+<!-- 02 作るもの -->
 <section class="alt">
   <div class="wrap">
-    <h2><span class="num">WHAT</span>お作りするもの</h2>
-    <p class="lead">応募者が知りたいことだけで構成した、採用専用のサイトを一式でお作りします。今お使いの会社サイトには手を加えません。別に立ち上げてお渡しします。</p>
+    <div class="sec-head">
+      <span class="sec-no">02 &nbsp;SERVICE</span>
+      <h2>お作りするもの</h2>
+      <p class="lead">応募者が知りたいことだけで構成した、採用専用のサイトを一式でお作りします。<b>今お使いの会社サイトには手を加えません。</b>別に立ち上げてお渡しします。</p>
+    </div>
     <div class="pages">
-      <div class="page"><span class="n">1</span><h3>トップ</h3><p>どんな仕事で、誰を募集しているのかが一目で分かる入口。</p></div>
-      <div class="page"><span class="n">2</span><h3>仕事を知る</h3><p>職種ごとの仕事内容、1日の流れ、入社後のキャリアと資格支援。</p></div>
-      <div class="page"><span class="n">3</span><h3>働く人</h3><p>社員インタビュー2〜3本。前職、入社理由、大変だったこと。</p></div>
-      <div class="page"><span class="n">4</span><h3>募集要項</h3><p>給与、休日、待遇、福利厚生、選考の流れ、よくある質問。</p></div>
-      <div class="page"><span class="n">5</span><h3>応募フォーム</h3><p>スマホから数分で送れる応募窓口。カジュアル面談の導線も。</p></div>
+      <div class="pg"><span class="n">1</span><h3>トップ</h3><p>どんな仕事で、誰を募集しているのかが一目で分かる入口。</p></div>
+      <div class="pg"><span class="n">2</span><h3>仕事を知る</h3><p>職種ごとの仕事内容、1日の流れ、キャリアと資格支援。</p></div>
+      <div class="pg"><span class="n">3</span><h3>働く人</h3><p>社員インタビュー2〜3本。前職、入社理由、大変だったこと。</p></div>
+      <div class="pg"><span class="n">4</span><h3>募集要項</h3><p>給与、休日、待遇、福利厚生、選考フロー、よくある質問。</p></div>
+      <div class="pg"><span class="n">5</span><h3>応募フォーム</h3><p>スマホから数分で送れる窓口。カジュアル面談の導線も。</p></div>
     </div>
   </div>
 </section>
 
+<!-- 03 サンプル -->
 <section id="samples">
   <div class="wrap">
-    <h2><span class="num">SAMPLE</span>2つの型から選べます</h2>
-    <p class="lead">ゼロからデザインを起こすのではなく、建設会社向けに設計した2つの型をご用意しています。募集職種と社風に合う方を選んでいただき、中身を御社の取材内容に差し替えてお作りします。だからこの価格で、この期間で仕上がります。</p>
+    <div class="sec-head">
+      <span class="sec-no">03 &nbsp;SAMPLE</span>
+      <h2><em>2つの型</em>から選べます</h2>
+      <p class="lead">ゼロからデザインを起こすのではなく、建設会社向けに設計した2つの型をご用意しています。募集職種と社風に合う方をお選びいただき、中身を御社の取材内容に差し替えてお作りします。だからこの価格で、この期間で仕上がります。</p>
+    </div>
     <div class="samples">
       <div class="sample">
-        <div class="thumb"><img src="images/sample-a.jpg" alt="サンプルA 職人・施工管理の採用サイト"></div>
+        <div class="thumb"><img src="images/sample-a.jpg" alt="TYPE A 現場と数字で見せる採用サイトのサンプル" loading="lazy"></div>
         <div class="body">
           <span class="tag">TYPE A</span>
           <h3>現場と数字で見せる型</h3>
-          <p>現場写真を大きく使い、平均年齢・年間休日・未経験入社率といった数字を前に出します。未経験の不安を先回りして解消する構成。職人・施工管理の募集に向いています。</p>
-          <a href="sample-a/" target="_blank" rel="noopener">サンプルを見る</a>
+          <p>現場写真を大きく使い、平均年齢・年間休日・未経験入社率といった数字を前に出します。未経験者の不安を先回りして解消する構成。職人・施工管理の募集に向いています。</p>
+          <a class="go" href="sample-a/" target="_blank" rel="noopener">サンプルを見る →</a>
         </div>
       </div>
       <div class="sample">
-        <div class="thumb"><img src="images/sample-b.jpg" alt="サンプルB 会社の姿勢と人で見せる採用サイト"></div>
+        <div class="thumb"><img src="images/sample-b.jpg" alt="TYPE B 会社の姿勢と人で見せる採用サイトのサンプル" loading="lazy"></div>
         <div class="body">
           <span class="tag">TYPE B</span>
           <h3>会社の姿勢と人で見せる型</h3>
           <p>手がける仕事の幅と、働く人を前に出す構成。設計から施工まで一貫している会社や、複数の職種をまとめて募集したい会社に向いています。</p>
-          <a href="sample-b/" target="_blank" rel="noopener">サンプルを見る</a>
+          <a class="go" href="sample-b/" target="_blank" rel="noopener">サンプルを見る →</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<!-- 04 中身 -->
+<section class="tint">
   <div class="wrap narrow">
-    <h2><span class="num">CORE</span>差がつくのは、デザインではなく中身です</h2>
-    <p class="lead">応募するかどうかを決めている情報は、ほとんどが社内にあります。ただ、社長ご自身では言葉になっていないことが多い。そこを引き出して、載る形に整えるのが私たちの仕事です。</p>
-    <table class="cmp">
-      <thead><tr><th>応募者が見ているもの</th><th>どこから持ってくるか</th></tr></thead>
-      <tbody>
-        <tr><th>給与が具体的に書いてあるか</th><td>ヒアリング</td></tr>
-        <tr><th>休日が本当に取れるか</th><td>ヒアリング</td></tr>
-        <tr><th>社員の顔と、実際の言葉</th><td>社員インタビュー（オンライン）</td></tr>
-        <tr><th>現場の様子</th><td>御社にある施工実績の写真</td></tr>
-        <tr><th>資格取得の支援があるか</th><td>ヒアリング</td></tr>
-        <tr><th>寮・車貸与の有無</th><td>ヒアリング</td></tr>
-      </tbody>
-    </table>
-    <p class="lead" style="margin-top:28px;margin-bottom:0">写真は御社にある施工実績のものをそのまま使います。足りない場合は、スマホでの撮り方をまとめた手引きをお渡しします。<b>撮影のための訪問はしません。</b>だから全国どこでも、この料金で承れます。</p>
+    <div class="sec-head">
+      <span class="sec-no">04 &nbsp;CORE</span>
+      <h2>差がつくのは、<br>デザインではなく<em>中身</em>です</h2>
+      <p class="lead">応募を左右する情報は、ほとんど社内にあります。ただ、社長ご自身では言葉になっていないことが多い。そこを引き出して、載る形に整えるのが仕事の中心です。</p>
+    </div>
+    <div class="core">
+      <div class="row"><div>応募者が見ているもの</div><div>どこから持ってくるか</div></div>
+      <div class="row"><div>給与が具体的に書いてあるか</div><div>ヒアリング</div></div>
+      <div class="row"><div>休日が本当に取れるか</div><div>ヒアリング</div></div>
+      <div class="row"><div>社員の顔と、実際の言葉</div><div>社員インタビュー（オンライン）</div></div>
+      <div class="row"><div>現場の様子</div><div>御社にある施工実績の写真</div></div>
+      <div class="row"><div>資格取得の支援があるか</div><div>ヒアリング</div></div>
+      <div class="row"><div>寮・車貸与の有無</div><div>ヒアリング</div></div>
+    </div>
+    <p class="lead" style="margin-top:30px">写真は御社にある施工実績のものをそのまま使います。足りなければ、スマホでの撮り方をまとめた手引きをお渡しします。<b>撮影のための訪問はしません。</b>だから全国どこでも、同じ料金で承れます。</p>
   </div>
 </section>
 
+<!-- 05 料金 -->
 <section id="price">
   <div class="wrap narrow">
-    <h2><span class="num">PRICE</span>料金</h2>
-    <p class="lead">追加費用はありません。取材も原稿も込みの金額です。</p>
-    <div class="price">
-      <div class="top"><b>採用サイト 新規構築</b></div>
-      <div class="amount">
-        <div class="yen">50<small>万円</small><span style="font-size:16px;font-weight:400;color:var(--sub)">（税別・一括）</span></div>
-        <div class="note">＋ 保守 月額 1.5万円（原稿の差し替え・更新対応）</div>
+    <div class="sec-head">
+      <span class="sec-no">05 &nbsp;PRICE</span>
+      <h2>料金</h2>
+      <p class="lead">取材も原稿も込みの金額です。追加費用はありません。</p>
+    </div>
+    <div class="pricebox">
+      <div class="hdr">採用サイト 新規構築</div>
+      <div class="amt">
+        <div class="y">50<small>万円</small></div>
+        <span class="tax">税別・一括</span>
+        <span class="keep">＋ 保守 月額 1.5万円</span>
       </div>
       <ul>
         <li>ヒアリング・社員インタビュー（オンライン）</li>
@@ -283,25 +371,32 @@
       <div class="foot">サーバー・ドメインは御社名義でご契約いただきます（月1,000円程度）。お手続きの代行も承ります。<b>名義が御社であることが、サイトが御社のものである証明になります。</b></div>
     </div>
 
-    <h2 style="margin-top:64px"><span class="num">COMPARE</span>毎年払い続けるか、一度で自社のものにするか</h2>
+    <div class="sec-head" style="margin-top:80px;margin-bottom:0">
+      <span class="sec-no">COMPARE</span>
+      <h2>毎年払い続けるか、<br><em>一度で自社のもの</em>にするか</h2>
+    </div>
     <table class="cmp">
-      <thead><tr><th></th><th>月額制のサービス</th><th class="good">建設採用サイト工房</th></tr></thead>
+      <thead><tr><th></th><th>月額制のサービス</th><th>建設採用サイト工房</th></tr></thead>
       <tbody>
         <tr><th>初期費用</th><td>0円</td><td>50万円</td></tr>
-        <tr><th>月額</th><td>3万円前後</td><td class="good">1.5万円（保守のみ）</td></tr>
-        <tr><th>5年間の総額</th><td>約180万円</td><td class="good">約140万円</td></tr>
-        <tr><th>解約したら</th><td>サイトは消えます</td><td class="good">御社の資産として残ります</td></tr>
-        <tr><th>中身の作り方</th><td>テンプレートに流し込み</td><td class="good">1社ずつ取材して書く</td></tr>
+        <tr><th>月額</th><td>3万円前後</td><td>1.5万円（保守のみ）</td></tr>
+        <tr><th>5年間の総額</th><td>約180万円</td><td>約140万円</td></tr>
+        <tr><th>解約したら</th><td>サイトは消えます</td><td>御社の資産として残ります</td></tr>
+        <tr><th>中身の作り方</th><td>テンプレートに流し込み</td><td>1社ずつ取材して書く</td></tr>
       </tbody>
     </table>
-    <p class="lead" style="margin-top:24px;margin-bottom:0"><b>借り物か、資産か。</b>月額契約のサイトは、払い続けている間だけ存在します。お渡しするものは、御社の資産として残ります。</p>
+    <div class="verdict" style="margin-top:34px"><em>借り物か、資産か。</em><br>月額契約のサイトは、払い続けている間だけ存在します。<br>お渡しするものは、御社の資産として残ります。</div>
   </div>
 </section>
 
+<!-- 06 進め方 -->
 <section class="alt">
   <div class="wrap narrow">
-    <h2><span class="num">FLOW</span>進め方</h2>
-    <p class="lead">ご連絡から公開まで、およそ1か月半です。すべてオンラインで完結します。</p>
+    <div class="sec-head">
+      <span class="sec-no">06 &nbsp;FLOW</span>
+      <h2>進め方</h2>
+      <p class="lead">ご相談から公開まで、およそ1か月半。すべてオンラインで完結します。</p>
+    </div>
     <ol class="flow">
       <li><h3>ご相談（30分・オンライン）</h3><p>今の採用の状況と、募集したい職種をお聞きします。無理にお勧めすることはありません。</p></li>
       <li><h3>お見積り・型のご提案</h3><p>2つの型のどちらが合うかをご提案します。ここまで費用はかかりません。</p></li>
@@ -312,30 +407,36 @@
   </div>
 </section>
 
+<!-- 07 FAQ -->
 <section>
   <div class="wrap narrow">
-    <h2><span class="num">FAQ</span>よくあるご質問</h2>
+    <div class="sec-head">
+      <span class="sec-no">07 &nbsp;FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
     <details><summary>今のホームページは作り直す必要がありますか</summary><p>ありません。採用サイトは別に立ち上げますので、今お使いのサイトには一切手を加えません。管理している制作会社と連絡が取れない場合でも問題ありません。</p></details>
     <details><summary>写真がないのですが</summary><p>施工実績のお写真があれば十分です。現場でお撮りになったものをお送りください。足りない場合は、スマホでの撮り方をまとめた手引きをお渡しします。</p></details>
     <details><summary>取材のために来社してもらえますか</summary><p>訪問と撮影は行っておりません。取材はすべてオンラインです。そのぶん全国どこでも同じ料金で承れます。</p></details>
     <details><summary>社員インタビューは誰に頼めばいいですか</summary><p>入社2〜3年目の若手、中堅、ベテランの3名がそろうと、応募者の年代に届きやすくなります。難しい場合は社長お一人でも構いません。</p></details>
-    <details><summary>公開までどのくらいかかりますか</summary><p>ご発注からおよそ1か月半です。取材の日程と原稿確認のご返信で前後します。</p></details>
-    <details><summary>保守は必ず契約が必要ですか</summary><p>お願いしています。採用サイトは、募集要項や社員の入れ替わりで内容が変わります。更新されないサイトは、かえって印象を悪くするためです。</p></details>
+    <details><summary>公開までどのくらいかかりますか</summary><p>ご発注からおよそ1か月半です。取材の日程と、原稿確認のご返信で前後します。</p></details>
+    <details><summary>保守は必ず契約が必要ですか</summary><p>お願いしています。採用サイトは募集要項や社員の入れ替わりで内容が変わります。更新されないサイトは、かえって印象を悪くするためです。</p></details>
   </div>
 </section>
 
-<div class="cta-band" id="contact">
+<!-- CTA -->
+<div class="cta" id="contact">
   <div class="wrap narrow">
-    <h2>まずは30分、今の採用の話を聞かせてください</h2>
-    <p>その場で見積りを出すことはありません。<br>今のサイトを一緒に見て、直すと効きそうなところをお伝えします。</p>
-    <a class="btn btn-p" href="mailto:info@kensetsu-saiyo-koubou.jp?subject=採用サイトの相談">メールで相談する</a>
+    <h2>まずは30分、<br>今の採用の話を聞かせてください</h2>
+    <p>その場でお見積りを出すことはありません。<br>今のサイトを一緒に見て、直すと効きそうなところをお伝えします。</p>
+    <a class="pill lg" href="mailto:info@kensetsu-saiyo-koubou.jp?subject=採用サイトのご相談">メールで相談する →</a>
   </div>
 </div>
 
+<!-- ABOUT -->
 <section>
   <div class="wrap narrow">
-    <h2><span class="num">ABOUT</span>運営者情報</h2>
-    <table class="co">
+    <div class="sec-head"><span class="sec-no">ABOUT</span><h2>運営者情報</h2></div>
+    <table class="about">
       <tr><th>屋号</th><td>建設採用サイト工房</td></tr>
       <tr><th>代表者</th><td>前島 秀伍</td></tr>
       <tr><th>所在地</th><td>〒150-0041　東京都渋谷区神南1丁目11-4　FPGリンクス神南5階</td></tr>
@@ -347,8 +448,8 @@
 </section>
 
 <footer>
-  <div class="wrap footer-in">
-    <div><b>建設採用サイト工房</b><br>建設会社の採用サイト専門　代表 前島 秀伍<br>東京都渋谷区神南1丁目11-4 FPGリンクス神南5階</div>
+  <div class="wrap fin">
+    <div><b>建設採用サイト工房</b>建設会社の採用サイト専門　代表 前島 秀伍<br>東京都渋谷区神南1丁目11-4 FPGリンクス神南5階</div>
     <div>&copy; 2026 建設採用サイト工房</div>
   </div>
 </footer>
