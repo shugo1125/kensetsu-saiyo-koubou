@@ -1,5 +1,5 @@
 /* ============================================
-   株式会社サンプル建設 採用サイト - script.js
+   株式会社Startup Rings 採用サイト - script.js
    ============================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
